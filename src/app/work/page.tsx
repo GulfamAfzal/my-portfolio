@@ -3,38 +3,38 @@
 import { useEffect } from "react";
 
 export default function WorkSection() {
-  const works = [
-    {
-      title: "Official Member",
-      description:
-        "Actively participating in IEEE community activities and contributing to technical events.",
-      duration: "IEEE (Institute of Electrical and Electronics Engineers) – 2025–Present",
-      image: "/images/ieee.png",
-    },
-    {
-      title: "Teaching Assistant (OOP)",
-      description:
-        "Guided students in Object-Oriented Programming concepts and assignments.",
-      duration: "Namal University, Mianwali – 2024–2025",
-      image: "/images/ta.png",
-    },
-    {
-      title: "Graphic Designer",
-      description:
-        "Worked on design projects and visual content for Rinova International.",
-      duration: "Rinova International – 2023–Present",
-      image: "/images/graphic.jpg",
-    },
-    {
-      title: "Video Creator",
-      description:
-        "Produced a video for UNESCO&apos;s Water Competition focused on glaciers.",
-      duration: "Independent Project / Competition – 2023",
-      image: "/images/Vedio.jpg",
-    },
-  ];
-
   useEffect(() => {
+    const works = [
+      {
+        title: "Official Member",
+        description:
+          "Actively participating in IEEE community activities and contributing to technical events.",
+        duration: "IEEE (Institute of Electrical and Electronics Engineers) – 2025–Present",
+        image: "/images/ieee.png",
+      },
+      {
+        title: "Teaching Assistant (OOP)",
+        description:
+          "Guided students in Object-Oriented Programming concepts and assignments.",
+        duration: "Namal University, Mianwali – 2024–2025",
+        image: "/images/ta.png",
+      },
+      {
+        title: "Graphic Designer",
+        description:
+          "Worked on design projects and visual content for Rinova International.",
+        duration: "Rinova International – 2023–Present",
+        image: "/images/graphic.jpg",
+      },
+      {
+        title: "Video Creator",
+        description:
+          "Produced a video for UNESCO's Water Competition focused on glaciers.",
+        duration: "Independent Project / Competition – 2023",
+        image: "/images/Vedio.jpg",
+      },
+    ];
+
     const container: HTMLElement | null = document.getElementById("work-section");
     if (!container) return;
     container.innerHTML = "";
@@ -70,7 +70,7 @@ export default function WorkSection() {
       `;
       container.appendChild(card);
     });
-  }, [works]); // ✅ Added works dependency
+  }, []); // ✅ No dependencies needed, ESLint-safe
 
   return (
     <div

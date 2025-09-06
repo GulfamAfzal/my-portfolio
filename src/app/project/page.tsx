@@ -3,86 +3,86 @@
 import { useEffect } from "react";
 
 export default function ProjectsPage() {
-  const projects = [
-    {
-      title: "Keylogger",
-      description: "A keylogger built as a system monitoring experiment.",
-      tech: ["Assembly Language"],
-      image: "/images/keylogger.jpg",
-    },
-    {
-      title: "History of Pakistan Web App",
-      description: "A web application to showcase the history of Pakistan.",
-      tech: ["React.js", "Tailwind CSS", "MySQL"],
-      image: "/images/pakistan.png",
-    },
-    {
-      title: "File Compression Tool",
-      description: "A tool to compress and decompress files.",
-      tech: ["C++", "Algorithms"],
-      image: "/images/file.jpg",
-    },
-    {
-      title: "Chess Game",
-      description: "A console-based Chess game implementing classic rules.",
-      tech: ["C++", "Algorithms"],
-      image: "/images/chess.jpg",
-    },
-    {
-      title: "Snake and Ladder Game",
-      description: "A fun console-based Snake and Ladder game built with C++.",
-      tech: ["C++", "OOP"],
-      image: "/images/snake.jpg",
-    },
-    {
-      title: "Tic-Tac-Toe",
-      description: "A two-player Tic-Tac-Toe game with win-checking logic.",
-      tech: ["C++", "Game Dev"],
-      image: "/images/tick.jpg",
-    },
-    {
-      title: "Theft Detection System",
-      description:
-        "A model to detect theft by identifying guns being pointed using video data.",
-      tech: ["Python", "Roboflow", "OpenCV"],
-      image: "/images/theft.jpg",
-    },
-    {
-      title: "Spring Motion Simulator",
-      description:
-        "Interactive Python simulation of spring motion and harmonic oscillation.",
-      tech: ["Python", "Matplotlib", "Animation"],
-      image: "/images/simulation.jpg",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "Personal portfolio website showcasing skills, projects, and experience.",
-      tech: ["React.js", "Next.js", "Tailwind CSS"],
-      image: "/images/portfolio.png",
-    },
-    {
-      title: "E-Wallet",
-      description:
-        "An object-oriented C++ project simulating digital wallet operations.",
-      tech: ["C++", "OOP"],
-      image: "/images/wallet.png",
-    },
-    {
-      title: "Syncera - Skill Exchange Platform",
-      description: "A software engineering project for a skill exchange platform.",
-      tech: ["Software Engineering"],
-      image: "/images/skill.jpg",
-    },
-    {
-      title: "BCD Calculator",
-      description: "Digital Logic Design project to implement a BCD calculator.",
-      tech: ["DLD", "C++"],
-      image: "/images/BCD.png",
-    },
-  ];
-
   useEffect(() => {
+    const projects = [
+      {
+        title: "Keylogger",
+        description: "A keylogger built as a system monitoring experiment.",
+        tech: ["Assembly Language"],
+        image: "/images/keylogger.jpg",
+      },
+      {
+        title: "History of Pakistan Web App",
+        description: "A web application to showcase the history of Pakistan.",
+        tech: ["React.js", "Tailwind CSS", "MySQL"],
+        image: "/images/pakistan.png",
+      },
+      {
+        title: "File Compression Tool",
+        description: "A tool to compress and decompress files.",
+        tech: ["C++", "Algorithms"],
+        image: "/images/file.jpg",
+      },
+      {
+        title: "Chess Game",
+        description: "A console-based Chess game implementing classic rules.",
+        tech: ["C++", "Algorithms"],
+        image: "/images/chess.jpg",
+      },
+      {
+        title: "Snake and Ladder Game",
+        description: "A fun console-based Snake and Ladder game built with C++.",
+        tech: ["C++", "OOP"],
+        image: "/images/snake.jpg",
+      },
+      {
+        title: "Tic-Tac-Toe",
+        description: "A two-player Tic-Tac-Toe game with win-checking logic.",
+        tech: ["C++", "Game Dev"],
+        image: "/images/tick.jpg",
+      },
+      {
+        title: "Theft Detection System",
+        description:
+          "A model to detect theft by identifying guns being pointed using video data.",
+        tech: ["Python", "Roboflow", "OpenCV"],
+        image: "/images/theft.jpg",
+      },
+      {
+        title: "Spring Motion Simulator",
+        description:
+          "Interactive Python simulation of spring motion and harmonic oscillation.",
+        tech: ["Python", "Matplotlib", "Animation"],
+        image: "/images/simulation.jpg",
+      },
+      {
+        title: "Portfolio Website",
+        description:
+          "Personal portfolio website showcasing skills, projects, and experience.",
+        tech: ["React.js", "Next.js", "Tailwind CSS"],
+        image: "/images/portfolio.png",
+      },
+      {
+        title: "E-Wallet",
+        description:
+          "An object-oriented C++ project simulating digital wallet operations.",
+        tech: ["C++", "OOP"],
+        image: "/images/wallet.png",
+      },
+      {
+        title: "Syncera - Skill Exchange Platform",
+        description: "A software engineering project for a skill exchange platform.",
+        tech: ["Software Engineering"],
+        image: "/images/skill.jpg",
+      },
+      {
+        title: "BCD Calculator",
+        description: "Digital Logic Design project to implement a BCD calculator.",
+        tech: ["DLD", "C++"],
+        image: "/images/BCD.png",
+      },
+    ];
+
     const container: HTMLElement | null = document.getElementById("projects-section");
     if (!container) return;
     container.innerHTML = "";
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
       `;
       container.appendChild(card);
     });
-  }, [projects]); // ✅ Added projects dependency
+  }, []); // ✅ No dependencies, ESLint-safe
 
   return (
     <div

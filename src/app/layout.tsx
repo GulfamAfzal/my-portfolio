@@ -5,7 +5,7 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Gulfam's Portfolio",
+  title: "Gulfam&apos;s Portfolio",
   description: 'Web & Cybersecurity Specialist',
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Navbar */}
         <header className="fixed w-full top-0 z-50 flex justify-between items-center px-8 sm:px-16 py-6 shadow-md bg-gray-800">
           <div className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 animate-pulse">
-            Gulfam's Portfolio
+            Gulfam&apos;s Portfolio
           </div>
           <nav className="hidden md:flex gap-6 items-center">
             {menuItems.map((item, index) => (
@@ -43,7 +43,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
             ))}
           </nav>
-
         </header>
 
         {/* Remove padding from main and hide scroll */}
