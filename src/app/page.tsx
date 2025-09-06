@@ -1,103 +1,84 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-black text-gray-200">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <main className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto px-8 sm:px-16 pt-32 pb-16 gap-12">
+
+        {/* Left Text */}
+        <div className="flex-1 text-center md:text-left -mt-4 animate-slideInLeft">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text 
+                         bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 
+                         mb-6 animate-pulse whitespace-nowrap">
+            Web & Cybersecurity Specialist
+          </h1>
+
+          <h3 className="text-4xl sm:text-3xl font-bold text-transparent bg-clip-text 
+                         bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 mb-4 animate-pulse">
+            Hello, I’m Gulfam 👋
+          </h3>
+
+          <p className="mt-4 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl text-justify">
+            I am a Computer Science student at Namal University, Mianwali with expertise in C, C++, Python, and Assembly Language (x86, MIPS). Skilled in Object-Oriented Programming, Database Management, and System Development. Passionate about Cybersecurity and building secure, efficient, and scalable software solutions that solve real-world problems.
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+            <a
+              href="/cv.pdf"
+              download="Gulfam_CV.pdf"   // ✅ forces download with filename
+              className="px-6 py-3 rounded-lg text-black font-bold shadow-lg 
+                        bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500
+                        animate-pulse hover:scale-105 transform transition duration-300"
+            >
+              📄 CV
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gulfam123"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg text-black font-bold shadow-lg 
+                         bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400
+                         animate-pulse hover:scale-105 transform transition duration-300"
+            >
+              🔗 LinkedIn
+            </a>
+            <a
+              href="https://github.com/GulfamAfzal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg text-black font-bold shadow-lg 
+                         bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500
+                         animate-pulse hover:scale-105 transform transition duration-300"
+            >
+              💻 GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Right Profile Image */}
+        <div className="flex-1 flex justify-center md:justify-start md:ml-12 animate-slideInRight">
+          <div className="relative rounded-xl">
+            <div className="absolute -inset-1 rounded-xl bg-gradient-to-r 
+                            from-red-500 via-blue-500 via-green-400 via-pink-500 to-yellow-400
+                            blur-4xl opacity-95 animate-pulse"></div>
+
+            <div className="relative p-1 bg-gray-800 rounded-xl shadow-lg">
+              <Image
+                src="/assets/gulfam.jpg"
+                alt="Gulfam"
+                width={250}
+                height={250}
+                className="rounded-xl"
+              />
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
