@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser"; // updated import
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactPage() {
@@ -69,7 +69,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="bg-[#1f2937] p-6 rounded-xl shadow-lg flex flex-col gap-4 border border-transparent hover:border-green-400 hover:shadow-[0_0_20px_#22c55e] transition-all duration-500"
           >
-            <h2 className="text-2xl font-bold text-green-400">Let's work together</h2>
+            <h2 className="text-2xl font-bold text-green-400">Let&apos;s work together</h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
               <div className="grid sm:grid-cols-2 gap-3">
                 <input

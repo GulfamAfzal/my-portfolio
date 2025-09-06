@@ -28,19 +28,19 @@ export default function WorkSection() {
     {
       title: "Video Creator",
       description:
-        "Produced a video for UNESCO’s Water Competition focused on glaciers.",
+        "Produced a video for UNESCO&apos;s Water Competition focused on glaciers.",
       duration: "Independent Project / Competition – 2023",
       image: "/images/Vedio.jpg",
     },
   ];
 
   useEffect(() => {
-    const container = document.getElementById("work-section");
+    const container: HTMLElement | null = document.getElementById("work-section");
     if (!container) return;
     container.innerHTML = "";
 
     works.forEach((work, index) => {
-      const card = document.createElement("div");
+      const card: HTMLElement = document.createElement("div");
 
       // Alternate slide from left/right
       const slideClass = index % 2 === 0 ? "animate-slideInLeft" : "animate-slideInRight";
@@ -70,7 +70,7 @@ export default function WorkSection() {
       `;
       container.appendChild(card);
     });
-  }, []);
+  }, [works]); // ✅ Added works dependency
 
   return (
     <div

@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 
 export default function SkillsPage() {
   useEffect(() => {
-    const skills: any = {
+    const skills: Record<string, any> = {
       "Programming & Development": {
         Languages: [
           "Python",
@@ -66,7 +65,7 @@ export default function SkillsPage() {
     }
 
     function generateSkills() {
-      const container = document.getElementById("skills-section");
+      const container: HTMLElement | null = document.getElementById("skills-section");
       if (!container) return;
       container.innerHTML = "";
 
@@ -75,12 +74,12 @@ export default function SkillsPage() {
         sectionDiv.className = "skills-section";
 
         // Section Title
-        const sectionTitle = document.createElement("h2");
+        const sectionTitle: HTMLElement = document.createElement("h2");
         sectionTitle.textContent = section;
         sectionTitle.style.background =
           "linear-gradient(90deg, #a855f7, #ec4899, #facc15)";
         sectionTitle.style.backgroundSize = "200% auto";
-        sectionTitle.style.webkitBackgroundClip= "text";
+        sectionTitle.style.webkitBackgroundClip = "text";
         sectionTitle.style.backgroundClip = "text";
         sectionTitle.style.color = "transparent";
         sectionTitle.style.textAlign = "center";
@@ -120,7 +119,7 @@ export default function SkillsPage() {
         } else {
           // Subsections like Languages, Tools
           for (const sub in skills[section]) {
-            const subTitle = document.createElement("h3");
+            const subTitle: HTMLElement = document.createElement("h3");
             subTitle.textContent = sub;
             subTitle.style.background =
               "linear-gradient(90deg, #a855f7, #ec4899, #facc15)";
@@ -169,15 +168,15 @@ export default function SkillsPage() {
     }
 
     generateSkills();
-  }, []);
+  }, []); // ✅ No missing dependency needed here
 
   return (
     <div className="min-h-screen bg-black text-gray-200 p-8 flex flex-col">
       <p className="text-lg mb-10 text-center">
-        Here’s a snapshot of my professional expertise and technical
+        Here&apos;s a snapshot of my professional expertise and technical
         capabilities.
         <br />
-        I’ve divided my skills into Programming & Development, Cybersecurity &
+        I&apos;ve divided my skills into Programming & Development, Cybersecurity & 
         Tools, and Soft Skills.
       </p>
 

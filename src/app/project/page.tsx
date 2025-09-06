@@ -83,12 +83,12 @@ export default function ProjectsPage() {
   ];
 
   useEffect(() => {
-    const container = document.getElementById("projects-section");
+    const container: HTMLElement | null = document.getElementById("projects-section");
     if (!container) return;
     container.innerHTML = "";
 
     projects.forEach((project, index) => {
-      const card = document.createElement("div");
+      const card: HTMLElement = document.createElement("div");
 
       // Add slide animation classes alternately
       const slideClass = index % 2 === 0 ? "animate-slideInLeft" : "animate-slideInRight";
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
       `;
       container.appendChild(card);
     });
-  }, []);
+  }, [projects]); // ✅ Added projects dependency
 
   return (
     <div
