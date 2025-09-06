@@ -2,9 +2,14 @@
 
 import { useEffect } from "react";
 
+// Define TypeScript types for skills
+type SkillSection =
+  | string[] // For Soft Skills
+  | { [subsection: string]: string[] }; // For Programming & Cybersecurity sections
+
 export default function SkillsPage() {
   useEffect(() => {
-    const skills: Record<string, any> = {
+    const skills: Record<string, SkillSection> = {
       "Programming & Development": {
         Languages: [
           "Python",
