@@ -129,7 +129,7 @@ export default function SkillsPage() {
             subTitle.style.background =
               "linear-gradient(90deg, #a855f7, #ec4899, #facc15)";
             subTitle.style.backgroundSize = "200% auto";
-            subTitle.style.WebkitBackgroundClip = "text";
+            (subTitle.style as any).webkitBackgroundClip = "text";
             subTitle.style.backgroundClip = "text";
             subTitle.style.color = "transparent";
             subTitle.style.textAlign = "center";
