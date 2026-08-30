@@ -19,31 +19,116 @@ if (typeof window !== "undefined") {
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
 const projects = [
-  { title: "Keylogger", description: "A keylogger built as a system monitoring experiment.", tech: ["Assembly Language"], link: "#" },
-  { title: "History of Pakistan Web App", description: "A web application to showcase the history of Pakistan.", tech: ["React.js", "Tailwind CSS", "MySQL"], link: "#" },
-  { title: "File Compression Tool", description: "A tool to compress and decompress files using Huffman coding.", tech: ["C++", "Algorithms"], link: "#" },
-  { title: "Chess Game", description: "A console-based Chess game implementing classic rules and logic.", tech: ["C++", "Algorithms"], link: "#" },
-  { title: "Snake and Ladder Game", description: "A fun console-based Snake and Ladder game built with C++.", tech: ["C++", "OOP"], link: "#" },
-  { title: "Tic-Tac-Toe", description: "A two-player Tic-Tac-Toe game with win-checking logic.", tech: ["C++", "Game Dev"], link: "#" },
-  { title: "Theft Detection System", description: "A model to detect theft by identifying guns being pointed using video data.", tech: ["Python", "Roboflow", "OpenCV"], link: "#" },
-  { title: "Spring Motion Simulator", description: "Interactive Python simulation of spring motion and harmonic oscillation.", tech: ["Python", "Matplotlib", "Animation"], link: "#" },
-  { title: "Portfolio Website", description: "Personal portfolio website showcasing skills, projects, and experience.", tech: ["Next.js", "Tailwind CSS"], link: "#" },
-  { title: "E-Wallet", description: "An object-oriented C++ project simulating digital wallet operations.", tech: ["C++", "OOP"], link: "#" },
-  { title: "Syncera — Skill Exchange Platform", description: "A software engineering project for a skill exchange platform.", tech: ["Software Engineering"], link: "#" },
-  { title: "BCD Calculator", description: "Digital Logic Design project to implement a BCD calculator.", tech: ["DLD", "C++"], link: "#" },
-  { title: "ATS-CV-Reviewer", description: "AI-powered Applicant Tracking System and CV Reviewer using Gemini AI.", tech: ["Python", "Gemini AI", "n8n"], link: "#" },
-  { title: "Tailor Manager", description: "A digital dashboard web application for managing tailor shop operations.", tech: ["JavaScript"], link: "#" },
-  { title: "Network Device Monitor", description: "Industrial Network Device Monitoring System with real-time tracking.", tech: ["Flask", "SQLite", "JavaScript"], link: "#" },
-  { title: "Fullstack ToDo App", description: "Feature-rich To-Do app with SSR and WebSockets integration.", tech: ["Next.js", "SQLite3", "TypeScript"], link: "#" },
-  { title: "File Integrity Checker", description: "Cybersecurity tool to detect unauthorized file modifications via hashing.", tech: ["Python", "SHA-256"], link: "#" },
-  { title: "Omnilink Ecommerce Core", description: "Robust e-commerce backend system architecture and API.", tech: ["JavaScript"], link: "#" },
+  { title: "ATS-CV-Reviewer", description: "AI-powered Applicant Tracking System and CV Reviewer using Gemini AI.", tech: ["Python", "Gemini AI", "n8n"], link: "#", image: "/images/ats_cv_reviewer.jpg" },
+  { title: "Network Device Monitor", description: "Industrial Network Device Monitoring System with real-time tracking.", tech: ["Flask", "SQLite", "JavaScript"], link: "#", image: "/images/network_monitor.jpg" },
+  { title: "Omnilink Ecommerce Core", description: "Robust e-commerce backend system architecture and API.", tech: ["JavaScript"], link: "#", image: "/images/ecommerce_core.jpg" },
+  { title: "Fullstack ToDo App", description: "Feature-rich To-Do app with SSR and WebSockets integration.", tech: ["Next.js", "SQLite3", "TypeScript"], link: "#", image: "/images/todo_app.jpg" },
+  { title: "Keylogger", description: "A keylogger built as a system monitoring experiment.", tech: ["Assembly Language"], link: "#", image: "/images/keylogger.jpg" },
+  { title: "History of Pakistan Web App", description: "A web application to showcase the history of Pakistan.", tech: ["React.js", "Tailwind CSS", "MySQL"], link: "#", image: "/images/pakistan.png" },
+  { title: "File Compression Tool", description: "A tool to compress and decompress files using Huffman coding.", tech: ["C++", "Algorithms"], link: "#", image: "/images/file.jpg" },
+  { title: "Chess Game", description: "A console-based Chess game implementing classic rules and logic.", tech: ["C++", "Algorithms"], link: "#", image: "/images/chess.jpg" },
+  { title: "Snake and Ladder Game", description: "A fun console-based Snake and Ladder game built with C++.", tech: ["C++", "OOP"], link: "#", image: "/images/snake.jpg" },
+  { title: "Tic-Tac-Toe", description: "A two-player Tic-Tac-Toe game with win-checking logic.", tech: ["C++", "Game Dev"], link: "#", image: "/images/tick.jpg" },
+  { title: "Theft Detection System", description: "A model to detect theft by identifying guns being pointed using video data.", tech: ["Python", "Roboflow", "OpenCV"], link: "#", image: "/images/theft.jpg" },
+  { title: "Spring Motion Simulator", description: "Interactive Python simulation of spring motion and harmonic oscillation.", tech: ["Python", "Matplotlib", "Animation"], link: "#", image: "/images/simulation.jpg" },
+  { title: "Portfolio Website", description: "Personal portfolio website showcasing skills, projects, and experience.", tech: ["Next.js", "Tailwind CSS"], link: "#", image: "/images/portfolio.png" },
+  { title: "E-Wallet", description: "An object-oriented C++ project simulating digital wallet operations.", tech: ["C++", "OOP"], link: "#", image: "/images/wallet.png" },
+  { title: "Syncera — Skill Exchange Platform", description: "A software engineering project for a skill exchange platform.", tech: ["Software Engineering"], link: "#", image: "/images/skill.jpg" },
+  { title: "BCD Calculator", description: "Digital Logic Design project to implement a BCD calculator.", tech: ["DLD", "C++"], link: "#", image: "/images/BCD.png" },
+  { title: "Tailor Manager", description: "A digital dashboard web application for managing tailor shop operations.", tech: ["JavaScript"], link: "#", image: "/images/tailor_manager.jpg" },
+  { title: "File Integrity Checker", description: "Cybersecurity tool to detect unauthorized file modifications via hashing.", tech: ["Python", "SHA-256"], link: "#", image: "/images/file_integrity.jpg" },
 ];
 
-const workExperience = [
-  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events." },
-  { title: "Teaching Assistant (OOP)", org: "Namal University, Mianwali — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments." },
-  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International." },
-  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers." },
+export type JourneyItem = {
+  title: string;
+  org: string;
+  description: string;
+  fullText: string;
+  image?: string;
+};
+
+const journeyData: JourneyItem[] = [
+  { 
+    title: "Guest Speaker", 
+    org: "IEEE RAS COMSATS Wah", 
+    description: "Delivered a session on creating professional presentations using Canva.", 
+    fullText: `🎉 Honored to Share This Achievement!\n\nI am truly honored to have been invited as a Guest Speaker by IEEE Robotics and Automation Society (RAS), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, to deliver a session on: "Introduction to Canva and How to Create Professional Presentations Using Canva."\n\nIt was a wonderful opportunity to share practical techniques for designing impactful, professional presentations while engaging with talented and enthusiastic students. Seeing their curiosity and creativity made this experience truly rewarding.\n\nI would like to express my sincere gratitude to [IEEE](https://www.linkedin.com/company/ieee/), [IEEE Robotics and Automation Society](https://www.linkedin.com/company/ieee-ras/), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, and the organizing team for their warm hospitality and for presenting me with a Certificate of Appreciation. This recognition motivates me to continue contributing to the community through knowledge sharing and professional development.\n\nA special thanks to [SYED ARSALAN](https://www.linkedin.com/in/syed-arsalan-9a122525a/) (Vice Chairperson, [IEEE RAS CUI Wah](https://www.linkedin.com/company/ieee-ras-cui-wah/) Chapter) for the invitation, excellent coordination, and for making this session a success.\n\nI look forward to collaborating on more workshops, seminars, and opportunities that inspire learning, creativity, and innovation.\n\n[#IEEE](https://www.linkedin.com/search/results/all/?keywords=%23ieee) [#RoboticsAndAutomation](https://www.linkedin.com/search/results/all/?keywords=%23roboticsandautomation) [#Canva](https://www.linkedin.com/search/results/all/?keywords=%23canva) [#PublicSpeaking](https://www.linkedin.com/search/results/all/?keywords=%23publicspeaking)`,
+    image: "/images/journey_1.jpg"
+  },
+  {
+    title: "2nd Runner-Up",
+    org: "Aurax Speed Programming",
+    description: "Secured 2nd Runner-Up at Bahria University speed programming competition.",
+    fullText: `Proud to share that I secured 2nd Runner-Up in an Aurax Speed Programming Competition held at [Bahria University](https://www.linkedin.com/company/bahria-university/), Islamabad, alongside my teammate [Usman Ghani](https://www.linkedin.com/in/usmanghanics/)\n\nCompeting against participants from 25+ universities was honestly both challenging and exciting; every problem pushed us to think faster, stay calm, and trust our teamwork.\n\nGrateful to [Namal University](https://www.linkedin.com/company/namal-university-mianwali/) for their continued support and for the opportunity to represent and grow.\n\nOne important takeaway from this experience: in real competitions, you can’t rely on AI or external help, it’s your logic, practice, and problem-solving mindset that truly matter. Tools can support learning, but they can’t replace the ability to think under pressure.\n\nMoments like these remind me how much there is still to learn, and that’s the best part of this journey. Looking forward to improving and coming back even stronger\n\n[#Programming](https://www.linkedin.com/search/results/all/?keywords=%23programming) [#ProblemSolving](https://www.linkedin.com/search/results/all/?keywords=%23problemsolving)`,
+    image: "/images/journey_2.jpg"
+  },
+  {
+    title: "Graphic Designer",
+    org: "IEEE Islamabad Section",
+    description: "Serving as Graphic Designer for the IEEE Islamabad Section.",
+    fullText: `I am currently serving as the Graphic Designer of the IEEE Islamabad Section. It has been a fantastic experience creating visual content and contributing to the community.`,
+    image: "/images/journey_3.jpg"
+  },
+  {
+    title: "Student Ambassador",
+    org: "Namal University",
+    description: "Represented Namal University during BS Admissions Outreach Campaign.",
+    fullText: `I had the privilege to represent Namal University during our recent BS Admissions Outreach Campaign held from 11–13 February 2026 in Okara, Sahiwal, and Depalpur.\n\nWe visited multiple colleges and engaged with 2nd-year students to guide them about academic programs, scholarships, and student life at Namal. During the sessions, we highlighted Namal’s modern infrastructure, industry-oriented curriculum, and strong focus on market-driven skills aligned with current industry demands.\n\nInteracting with aspiring students, addressing their queries, and presenting the vision and opportunities at Namal was a truly enriching experience. This outreach not only allowed me to contribute to my university but also significantly enhanced my communication, leadership, and presentation skills.\n\nGrateful for the opportunity and looking forward to more impactful engagements ahead.\n\n[#NamalUniversity](https://www.linkedin.com/search/results/all/?keywords=%23namaluniversity) [#StudentAmbassador](https://www.linkedin.com/search/results/all/?keywords=%23studentambassador)`,
+    image: "/images/journey_4.jpg"
+  },
+  {
+    title: "4th Position - Cybersecurity",
+    org: "Team RDX Workshop",
+    description: "Secured 4th position overall in a 3-day Cybersecurity Workshop CTF.",
+    fullText: `Team RDX from FAST University Islamabad recently conducted a 3-day Cybersecurity Workshop at our campus.\n\nSpecial thanks to [Hafiz Muhammad Ibrahim Iqbal](https://www.linkedin.com/in/hafiz-muhammad-ibrahim-iqbal-29389429b/), the head of the team, for leading the workshop and sharing valuable knowledge.\n\nThe workshop included daily challenges with a live scoreboard to track our progress. I’m glad to share that I secured 4th position overall in the competition.\n\nGrateful for this learning experience and looking forward to applying these skills further! 🚀🔐\n\n[#CyberSecurity](https://www.linkedin.com/search/results/all/?keywords=%23cybersecurity) [#CTF](https://www.linkedin.com/search/results/all/?keywords=%23ctf)`,
+    image: "/images/journey_5.jpg"
+  },
+  {
+    title: "Python for Everybody",
+    org: "Dr. Charles Severance",
+    description: "Successfully completed the Python fundamentals and APIs course.",
+    fullText: `Excited to share that I have successfully completed the “Python for Everybody” course by Dr. Charles Severance (Dr. Chuck)! 🐍\n\nThis journey deepened my understanding of Python fundamentals, data structures, web scraping, and working with APIs. I’m now even more confident in applying Python to real-world projects and problem-solving.`,
+    image: "/images/journey_6.jpg"
+  },
+  {
+    title: "Linux & Shell Scripting",
+    org: "IBM (Coursera)",
+    description: "Completed Hands-on Introduction to Linux Commands and Shell Scripting.",
+    fullText: `Excited to share that I have successfully completed the “Hands-on Introduction to Linux Commands and Shell Scripting” course, authorized by IBM and offered through Coursera.\n\nThis course helped me strengthen my skills in Linux, shell scripting, and command-line operations — a valuable step forward in my journey toward cybersecurity and system administration.`,
+    image: "/images/journey_7.jpg"
+  },
+  {
+    title: "System & Network Security",
+    org: "LearnKartS (Coursera)",
+    description: "Deepened understanding of IoT security, scanning, and network resilience.",
+    fullText: `Thrilled to share that I have successfully completed the System and Network Security course by LearnKartS through Coursera.\n\nThis course deepened my understanding of:\n🔹 IoT security methodologies\n🔹 Network scanning & vulnerability assessment\n🔹 DDoS, jamming, and rolling code attacks\n🔹 Best practices for securing connected systems\n\nCybersecurity isn’t just about defense — it’s about staying ahead. Excited to apply these skills to build stronger, safer, and more resilient networks. 💻`,
+    image: "/images/journey_8.jpg"
+  },
+  {
+    title: "C++ Patterns: Creational",
+    org: "Software Engineering",
+    description: "Deepened understanding of creational design patterns in C++.",
+    fullText: `I am excited to have completed the "C++ Design Patterns: Creational" course as part of my software engineering assignment! This course deepened my understanding of key design patterns and their implementation in C++, a crucial skill for creating robust and scalable software systems.\n\nA special thanks to [Asiya Batool](https://www.linkedin.com/in/asiya-batool-125079340/) for her insightful guidance and support. Your expertise and encouragement have been invaluable in this learning journey!`,
+    image: "/images/journey_9.jpg"
+  },
+  {
+    title: "C++ Patterns: Behavioral",
+    org: "LinkedIn Learning",
+    description: "Mastered behavioral design patterns for object interactions.",
+    fullText: `Thrilled to share that I’ve completed the C++ Design Patterns: Behavioral course on LinkedIn Learning!\n\nThis course provided deep insights into designing robust and scalable software by mastering behavioral design patterns. These patterns help in:\n- Managing object interactions and responsibilities efficiently.\n- Writing cleaner, more maintainable, and flexible C++ code.\n- Leveraging patterns like Strategy, Observer, Command, State, and more to solve real-world programming challenges.`,
+    image: "/images/journey_10.jpg"
+  },
+  {
+    title: "C++ Patterns: Structural",
+    org: "LinkedIn Learning",
+    description: "Explored structural patterns for organizing object relationships.",
+    fullText: `I’ve recently completed the C++ Design Patterns: Structural course on LinkedIn Learning as part of our Software Engineering assignment.\n\nThis course deepened my understanding of structural design patterns, which are essential for organizing and simplifying relationships between objects and classes. Key concepts I explored include:\n\n1. Adapter Pattern: Bridging incompatible interfaces for seamless integration.\n2. Composite Pattern: Managing object hierarchies by treating individual and grouped objects uniformly.\n3. Decorator Pattern: Adding features dynamically to objects without altering their structure.\n4. Facade Pattern: Providing simplified interfaces to complex subsystems.\n5. Proxy Pattern: Controlling access to objects for security, logging, or performance enhancements.`,
+    image: "/images/journey_11.jpg"
+  },
+  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events.", fullText: "Actively participating in IEEE community activities and contributing to technical events.", image: "/images/journey_12.jpg" },
+  { title: "Teaching Assistant", org: "Namal University — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments.", fullText: "Guided students in Object-Oriented Programming concepts and assignments.", image: "/images/journey_13.jpg" },
+  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International.", fullText: "Worked on design projects and visual content for Rinova International.", image: "/images/journey_14.jpg" },
+  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers.", fullText: "Produced a video for UNESCO's Water Competition focused on glaciers.", image: "/images/journey_15.jpg" }
 ];
 
 const statTabs = [
@@ -98,11 +183,11 @@ function SkillTabSwitcher() {
     useRef<HTMLButtonElement>(null),
     useRef<HTMLButtonElement>(null),
   ];
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, top: 0, width: 0, height: 0 });
 
   useLayoutEffect(() => {
     const node = tabRefs[activeTab].current;
-    if (node) setIndicatorStyle({ left: node.offsetLeft, width: node.offsetWidth });
+    if (node) setIndicatorStyle({ left: node.offsetLeft, top: node.offsetTop, width: node.offsetWidth, height: node.offsetHeight });
     // tabRefs is a stable array of refs — safe to omit from deps
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
@@ -131,21 +216,32 @@ function SkillTabSwitcher() {
   ];
 
   return (
-    <div className="relative flex flex-col items-center w-full">
+    <div className="relative flex flex-col items-center w-full mt-10">
       {/* Tab bar */}
-      <div className="flex bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-lg px-2 py-2 gap-1 relative w-full max-w-[580px] mb-10">
+      <div
+        role="tablist"
+        aria-label="Skill categories"
+        className="inline-flex items-center bg-[#0a0a0a]/90 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl gap-1 sm:gap-2 relative w-auto max-w-[95vw] overflow-x-auto no-scrollbar -top-10 md:-top-16"
+        style={{ padding: '0.5rem 1rem' }}
+      >
         <div
-          className="absolute top-1 h-[calc(100%-0.5rem)] rounded-full bg-gradient-to-r from-purple-500/80 to-blue-500/80 shadow-lg transition-all duration-500 ease-out z-0"
-          style={{ left: indicatorStyle.left, width: indicatorStyle.width, pointerEvents: "none" }}
+          className="absolute rounded-full bg-gradient-to-r from-purple-500 to-blue-600 shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-500 ease-out z-0"
+          style={{ left: indicatorStyle.left, top: indicatorStyle.top, width: indicatorStyle.width, height: indicatorStyle.height, pointerEvents: "none" }}
         />
         {tabNames.map((tab, idx) => (
           <button
             key={tab}
             ref={tabRefs[idx]}
             onClick={() => setActiveTab(idx)}
-            className={`relative z-10 flex-1 px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold rounded-full transition-all duration-300 focus:outline-none ${
-              activeTab === idx ? "text-white scale-105" : "text-gray-400 hover:text-white"
-            }`}
+            onKeyDown={(e) => {
+              if (e.key === 'ArrowRight') setActiveTab((idx + 1) % tabNames.length);
+              if (e.key === 'ArrowLeft') setActiveTab((idx - 1 + tabNames.length) % tabNames.length);
+            }}
+            role="tab"
+            aria-selected={activeTab === idx}
+            className={`relative z-10 whitespace-nowrap text-sm sm:text-base font-semibold rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${activeTab === idx ? "text-white" : "text-gray-400 hover:text-white hover:bg-white/5"
+              }`}
+            style={{ padding: '0.75rem 1.75rem' }}
           >
             {tab}
           </button>
@@ -153,7 +249,7 @@ function SkillTabSwitcher() {
       </div>
 
       {/* Tab content */}
-      <div className="w-full">
+      <div className="w-full flex-1 flex flex-col justify-center pb-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -161,7 +257,7 @@ function SkillTabSwitcher() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 w-full"
           >
             {tabContent[activeTab].items.map((item, i) => (
               <motion.div
@@ -184,53 +280,71 @@ function SkillTabSwitcher() {
 // ─── 3D TILT PROJECT CARD ─────────────────────────────────────────────────────
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const card = cardRef.current;
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientY - rect.top - rect.height / 2) / (rect.height / 2)) * 10;
-    const y = ((e.clientX - rect.left - rect.width / 2) / (rect.width / 2)) * 10;
-    setTilt({ x, y });
-  }
-
   return (
     <motion.div
-      ref={cardRef}
-      className="group relative flex flex-col bg-gradient-to-br from-white/5 to-black/60 border border-gray-800 rounded-2xl shadow-xl px-6 pt-6 pb-5 cursor-pointer hover:border-purple-500 hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)]"
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm"
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.5, delay: (index % 6) * 0.07 }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
       viewport={{ once: true }}
-      style={{
-        transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-        transition: tilt.x === 0 ? "transform 0.5s ease" : "transform 0.12s ease",
-        willChange: "transform",
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={() => setTilt({ x: 0, y: 0 })}
     >
-      <div className="flex-1 flex flex-col">
-        <h3 className="text-base font-extrabold tracking-tight mb-2 text-white leading-snug">
-          {project.title}
-        </h3>
-        <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+      <div className="w-full h-40 relative overflow-hidden bg-black">
+        <Image src={project.image || "/images/portfolio.png"} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
+      </div>
+
+      <div className="flex-1 flex flex-col" style={{ padding: '24px' }}>
+        <h3 className="text-[18px] sm:text-[20px] font-bold text-white mb-3 line-clamp-1">{project.title}</h3>
+        <p className="text-[#9ca3af] text-[14px] leading-relaxed mb-4 line-clamp-2">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {project.tech.map((t) => (
-            <span key={t} className="text-xs bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full px-2.5 py-0.5 font-medium">
+        <div className="flex flex-wrap gap-2 mb-5">
+          {project.tech.slice(0, 3).map((t, i) => (
+            <span key={t} className={`text-[11px] font-semibold tracking-wider border rounded-full px-2.5 py-1 ${i === 0 ? 'bg-purple-500/20 text-purple-300 border-purple-500/30' : 'bg-white/5 text-gray-300 border-white/10'}`}>
               {t}
             </span>
           ))}
         </div>
+
+        <div className="mt-auto pt-2 flex items-center justify-between text-sm font-bold text-white group-hover:text-[#a855f7] transition-colors">
+          <span>View Details</span>
+          <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+        </div>
       </div>
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent mb-3" />
-      <div className="flex items-center gap-1.5 text-purple-400 text-sm font-bold group-hover:gap-2.5 transition-all duration-200">
-        <span>View Project</span>
-        <ArrowRight size={14} />
+    </motion.div>
+  );
+}
+
+function JourneyCard({ item, index, onClick }: { item: JourneyItem; index: number; onClick: () => void }) {
+  return (
+    <motion.div
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
+      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+      viewport={{ once: true }}
+      onClick={onClick}
+    >
+      <div className="w-full h-40 relative overflow-hidden bg-black">
+        <Image src={item.image || "/images/portfolio.png"} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
+      </div>
+
+      <div className="flex-1 flex flex-col" style={{ padding: '24px' }}>
+        <h3 className="text-[18px] sm:text-[20px] font-bold text-white mb-3 line-clamp-1">{item.title}</h3>
+        <p className="text-[#9ca3af] text-[14px] leading-relaxed mb-4 line-clamp-2">
+          {item.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-5">
+          <span className="text-[11px] font-semibold tracking-wider border rounded-full px-2.5 py-1 bg-purple-500/20 text-purple-300 border-purple-500/30 line-clamp-1">
+            {item.org}
+          </span>
+        </div>
+
+        <div className="mt-auto pt-2 flex items-center justify-between text-sm font-bold text-white group-hover:text-[#a855f7] transition-colors">
+          <span>View Details</span>
+          <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+        </div>
       </div>
     </motion.div>
   );
@@ -246,6 +360,9 @@ export default function Home() {
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [statTab, setStatTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [reelState, setReelState] = useState<'auto' | 'force-paused' | 'force-playing'>('auto');
+  const [journeyReelState, setJourneyReelState] = useState<'auto' | 'force-paused' | 'force-playing'>('auto');
+  const [selectedJourney, setSelectedJourney] = useState<JourneyItem | null>(null);
 
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
@@ -308,12 +425,12 @@ export default function Home() {
 
       {/* ── GLASSMORPHISM NAVBAR ─────────────────────────────── */}
       <header
-        className={`fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92vw] max-w-5xl rounded-2xl bg-white/10 backdrop-blur-md shadow-lg flex items-center justify-between px-7 md:px-10 py-4 md:py-5 transition-all duration-500 ${
-          showHeader ? "translate-y-0 opacity-100" : "-translate-y-32 opacity-0 pointer-events-none"
-        }`}
+        className={`fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92vw] max-w-5xl rounded-[2rem] bg-white/10 backdrop-blur-md shadow-lg flex items-center justify-between transition-all duration-500 ${showHeader ? "translate-y-0 opacity-100" : "-translate-y-32 opacity-0 pointer-events-none"
+          }`}
+        style={{ padding: "12px 32px" }}
         onMouseEnter={() => setShowHeader(true)}
       >
-        <a href="#" className="font-black italic text-lg md:text-2xl tracking-tight text-white whitespace-nowrap">
+        <a href="#" className="font-black italic text-lg md:text-2xl tracking-tight text-white whitespace-nowrap" style={{ marginLeft: "10px" }}>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Gulfam</span> Afzal
         </a>
 
@@ -323,7 +440,8 @@ export default function Home() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/80 font-semibold hover:text-white transition-all px-4 py-2 rounded-full border border-white/25 bg-white/5 hover:bg-white/15 hover:border-white/55 text-sm tracking-wide"
+              className="inline-flex items-center justify-center text-white/80 font-semibold hover:text-white transition-all rounded-full border border-white/25 bg-white/5 hover:bg-white/15 hover:border-white/55 text-sm tracking-wide"
+              style={{ padding: "8px 24px" }}
             >
               {link.label}
             </a>
@@ -410,7 +528,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl ring-2 ring-purple-500/40">
-              <Image src="/assets/gulfam.jpg" alt="Gulfam Afzal" width={112} height={112} className="w-full h-full object-cover" />
+              <Image src="/assets/gulfam.jpeg" alt="Gulfam Afzal" width={112} height={112} className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -423,7 +541,7 @@ export default function Home() {
             <span className="shiny-text">Gulfam Afzal</span>
           </motion.h1>
 
-          <p className="hero-subtitle text-sm sm:text-lg md:text-xl font-bold tracking-wide text-gray-300 mb-5">
+          <p className="hero-subtitle text-base sm:text-lg md:text-xl font-bold tracking-wide text-gray-300 mb-8">
             Computer Science Student · Namal University, Mianwali
           </p>
 
@@ -435,7 +553,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center justify-center gap-3 mb-10"
+              className="flex items-center justify-center gap-3 mb-20"
             >
               <span className="flex-1 max-w-[80px] sm:max-w-[120px] h-px bg-gradient-to-r from-transparent to-purple-400/60" />
               <span className="text-sm sm:text-base md:text-lg font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-blue-300 text-center">
@@ -446,10 +564,11 @@ export default function Home() {
           </AnimatePresence>
 
           {/* CTA buttons */}
-          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center items-center mb-14">
+          <div className="flex flex-wrap gap-4 sm:gap-5 justify-center items-center mb-14" style={{ marginTop: '48px' }}>
             <motion.a
               href="#projects"
-              className="px-9 sm:px-12 py-4 sm:py-5 border-2 border-white text-white font-bold text-sm sm:text-base tracking-widest hover:bg-white hover:text-black transition-colors rounded-3xl"
+              style={{ padding: "16px 40px" }}
+              className="flex items-center justify-center border-2 border-white text-white font-bold text-sm sm:text-base tracking-wide hover:bg-white hover:text-black transition-colors rounded-full"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -457,7 +576,8 @@ export default function Home() {
             </motion.a>
             <motion.a
               href="/contact"
-              className="px-9 sm:px-12 py-4 sm:py-5 border-2 border-purple-400 text-purple-400 font-bold text-sm sm:text-base tracking-widest hover:bg-purple-400 hover:text-black transition-colors rounded-3xl"
+              style={{ padding: "16px 40px" }}
+              className="flex items-center justify-center border-2 border-purple-400 text-purple-400 font-bold text-sm sm:text-base tracking-wide hover:bg-purple-400 hover:text-black transition-colors rounded-full"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -469,17 +589,17 @@ export default function Home() {
           <div className="flex md:hidden justify-center items-center gap-5 sm:gap-8 text-center flex-wrap">
             <div>
               <p className="text-2xl font-black text-white">18+</p>
-              <p className="text-xs text-white/50 tracking-wide mt-0.5">PROJECTS</p>
+              <p className="text-xs text-white/60 tracking-wide mt-0.5">PROJECTS</p>
             </div>
-            <div className="w-px h-8 bg-white/20" />
+            <div className="w-px h-8 bg-white/20" aria-hidden="true" />
             <div>
               <p className="text-2xl font-black text-white">3+</p>
-              <p className="text-xs text-white/50 tracking-wide mt-0.5">YEARS CODING</p>
+              <p className="text-xs text-white/60 tracking-wide mt-0.5">YEARS CODING</p>
             </div>
-            <div className="w-px h-8 bg-white/20" />
+            <div className="w-px h-8 bg-white/20" aria-hidden="true" />
             <div>
               <p className="text-2xl font-black text-white">4+</p>
-              <p className="text-xs text-white/50 tracking-wide mt-0.5">CYBER TOOLS</p>
+              <p className="text-xs text-white/60 tracking-wide mt-0.5">CYBER TOOLS</p>
             </div>
           </div>
         </div>
@@ -488,84 +608,91 @@ export default function Home() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          aria-hidden="true"
         >
           <ChevronDown size={28} />
         </motion.div>
       </section>
 
       {/* ── ABOUT SECTION ────────────────────────────────────── */}
-      <section id="about" className="about-section min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
-        {/* White dots */}
+      <section id="about" className="about-section min-h-screen flex flex-col items-center justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+        {/* Subtle White dots */}
         {([
-          { t: "10%", l: "5%", s: 2, o: 0.6 }, { t: "30%", r: "8%", s: 3, o: 0.4 },
-          { t: "60%", l: "20%", s: 1, o: 0.8 }, { t: "80%", r: "15%", s: 2, o: 0.5 },
+          { t: "10%", l: "5%", s: 2, o: 0.15 }, { t: "30%", r: "8%", s: 3, o: 0.1 },
+          { t: "60%", l: "20%", s: 1, o: 0.2 }, { t: "80%", r: "15%", s: 2, o: 0.15 },
         ] as { t: string; l?: string; r?: string; s: number; o: number }[]).map((d, i) => (
           <div key={i} className="white-dot absolute bg-white rounded-full"
             style={{ top: d.t, left: d.l, right: d.r, width: `${d.s * 4}px`, height: `${d.s * 4}px`, opacity: d.o }} />
         ))}
 
-        <div className="max-w-6xl mx-auto w-full">
+        <div className="max-w-4xl mx-auto w-full flex flex-col items-center">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-14 text-center"
-            initial={{ opacity: 0, y: 50 }}
+            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-12 text-center"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            ABOUT ME
+            <span className="shiny-text">ABOUT ME</span>
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
-            <div className="about-text flex flex-col gap-7 pl-2 md:pl-6">
-              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-300 text-justify">
-                I&apos;m a Computer Science student at <span className="text-purple-400 font-bold">Namal University, Mianwali</span> with a passion for building secure, efficient, and scalable software.
+          <div className="grid md:grid-cols-2 gap-6 md:gap-4 w-full items-center md:items-start">
+            <div className="about-text flex flex-col gap-6 md:gap-7 items-center md:items-start text-center md:text-left pt-2">
+              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-300 text-justify max-w-xl">
+                I&apos;m a Computer Science student at <span className="text-purple-400 font-bold">Namal University, Mianwali</span>, with a strong focus on <span className="text-white font-bold">Cybersecurity, Software Development, Networking, and AI Automation</span>.
               </p>
-              <p className="text-base sm:text-lg leading-relaxed text-gray-400 text-justify">
-                I have expertise in C, C++, Python, and Assembly Language (x86, MIPS). Skilled in Object-Oriented Programming, Database Management, and System Development. Passionate about Cybersecurity and building real-world solutions.
+              <p className="text-sm sm:text-base leading-relaxed text-gray-400 text-justify max-w-xl">
+                I have experience with <span className="text-gray-200 font-bold">Python, C++, JavaScript, React.js, Next.js, HTML, CSS, MySQL, and MongoDB</span>, along with <span className="text-gray-200 font-bold">Object-Oriented Programming, Database Management, and System Development</span>. My cybersecurity skill set includes <span className="text-gray-200 font-bold">Network Security, Penetration Testing, Linux, Wireshark, Nmap, Burp Suite, and Security Operations concepts</span>.
               </p>
-
-              <div className="flex items-center gap-5">
-                <motion.a href="https://github.com/GulfamAfzal" target="_blank" rel="noopener noreferrer"
-                  className="p-2.5 text-white hover:text-purple-400 transition-colors" whileHover={{ scale: 1.2 }}>
-                  <FaGithub size={28} />
-                </motion.a>
-                <motion.a href="https://www.linkedin.com/in/gulfam123" target="_blank" rel="noopener noreferrer"
-                  className="p-2.5 text-white hover:text-blue-400 transition-colors" whileHover={{ scale: 1.2 }}>
-                  <FaLinkedinIn size={28} />
-                </motion.a>
-                <motion.a href="mailto:gulfamafzal84@gmail.com"
-                  className="p-2.5 text-white hover:text-green-400 transition-colors" whileHover={{ scale: 1.2 }}>
-                  <Mail size={28} />
-                </motion.a>
-              </div>
-
-              <div>
+              <div className="flex flex-col items-center gap-5 pt-2">
                 <a
                   href="/cv.pdf"
                   download="Gulfam_CV.pdf"
-                  className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-md hover:from-purple-600 hover:to-blue-600 transition-colors text-base"
+                  className="jelly-green-btn gap-3 group"
                 >
-                  <Download size={18} />
-                  Download CV
+                  <Download size={20} className="group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
+                  <span>Download CV</span>
                 </a>
+
+                <div className="flex items-center justify-center gap-4">
+                  <motion.a href="https://github.com/GulfamAfzal" target="_blank" rel="noopener noreferrer"
+                    className="p-3 bg-purple-500/10 border border-purple-500/20 text-purple-300 hover:text-purple-400 hover:border-purple-500/40 hover:bg-purple-500/20 transition-all rounded-xl"
+                    whileHover={{ scale: 1.05 }}
+                    aria-label="GitHub">
+                    <FaGithub size={22} />
+                  </motion.a>
+                  <motion.a href="https://www.linkedin.com/in/gulfam123" target="_blank" rel="noopener noreferrer"
+                    className="p-3 bg-blue-500/10 border border-blue-500/20 text-blue-300 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/20 transition-all rounded-xl"
+                    whileHover={{ scale: 1.05 }}
+                    aria-label="LinkedIn">
+                    <FaLinkedinIn size={22} />
+                  </motion.a>
+                  <motion.a href="mailto:gulfamafzal84@gmail.com"
+                    className="p-3 bg-green-500/10 border border-green-500/20 text-green-300 hover:text-green-400 hover:border-green-500/40 hover:bg-green-500/20 transition-all rounded-xl"
+                    whileHover={{ scale: 1.05 }}
+                    aria-label="Email">
+                    <Mail size={22} />
+                  </motion.a>
+                </div>
               </div>
             </div>
 
             <motion.div
-              className="relative hidden md:flex justify-center"
-              initial={{ opacity: 0, scale: 0.85 }}
+              className="relative flex justify-center md:justify-end mt-8 md:mt-0"
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="w-full max-w-[340px] bg-gradient-to-br from-purple-600 to-blue-600 rounded-[2.5rem] p-[4px] shadow-[0_24px_80px_0_rgba(162,89,247,0.25)]">
-                <div className="bg-black rounded-[2.5rem] overflow-hidden">
+              <div className="w-full max-w-[280px] lg:max-w-[320px] aspect-[4/5] rounded-3xl p-1 bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-2xl relative group">
+                <div className="absolute inset-0 bg-purple-500/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="w-full h-full bg-[#0a0a0a] rounded-[22px] overflow-hidden relative z-10">
                   <Image
-                    src="/assets/gulfam.jpg"
+                    src="/assets/gulfam.jpeg"
                     alt="Gulfam Afzal"
-                    width={340}
-                    height={440}
-                    className="w-full object-cover rounded-[2.5rem]"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    className="object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -575,41 +702,43 @@ export default function Home() {
       </section>
 
       {/* ── STATS / EXPERIENCE TABS ───────────────────────────── */}
-      <section className="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+      <section id="experience" className="min-h-screen flex flex-col pt-32 pb-24 px-6 md:px-12 lg:px-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 zebra-bg pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative z-10 w-full">
+        <div className="max-w-6xl mx-auto relative z-10 w-full flex flex-col flex-1 justify-evenly">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-16 text-center"
+            className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {statTabs[statTab].title}
+            <span className="shiny-text">{statTabs[statTab].title}</span>
           </motion.h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <AnimatePresence mode="wait">
-              {statTabs[statTab].stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  className="text-center py-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                >
-                  <div className="mb-5 flex justify-center">
-                    <stat.icon size={44} className="text-white" />
-                  </div>
-                  <h3 className="text-3xl sm:text-5xl font-black text-white mb-3">{stat.number}</h3>
-                  <p className="text-white/70 font-bold tracking-widest text-xs sm:text-sm">{stat.label}</p>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+          <div className="w-full">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12" role="region" aria-live="polite" aria-atomic="true">
+              <AnimatePresence mode="wait">
+                {statTabs[statTab].stats.map((stat, i) => (
+                  <motion.div
+                    key={stat.label}
+                    className="text-center py-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                  >
+                    <div className="mb-5 flex justify-center" aria-hidden="true">
+                      <stat.icon size={44} className="text-white" />
+                    </div>
+                    <h3 className="text-3xl sm:text-5xl font-black text-white mb-3">{stat.number}</h3>
+                    <p className="text-white/70 font-bold tracking-widest text-xs sm:text-sm">{stat.label}</p>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
           </div>
 
-          <div className="flex justify-center mt-16">
+          <div className="flex justify-center w-full">
             <button
               onClick={() => setStatTab((statTab + 1) % statTabs.length)}
               className="w-14 h-14 rounded-full bg-white flex items-center justify-center shadow-lg hover:bg-gray-200 transition-colors"
@@ -630,23 +759,23 @@ export default function Home() {
           <div key={i} className="white-dot absolute bg-white rounded-full"
             style={{ top: d.t, left: d.l, right: d.r, width: `${d.s * 4}px`, height: `${d.s * 4}px`, opacity: d.o }} />
         ))}
-        <div className="max-w-6xl mx-auto w-full">
+        <div className="max-w-6xl mx-auto w-full flex flex-col items-center">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center"
+            className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter mb-4 text-center relative -top-10 md:-top-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            SKILLS
+            <span className="shiny-text">SKILLS</span>
           </motion.h2>
-          <p className="text-gray-400 text-center mb-14 text-base sm:text-lg">A breakdown of my technical expertise and capabilities.</p>
+          <p className="text-gray-400 text-center mb-14 text-base sm:text-lg relative -top-10 md:-top-16">A breakdown of my technical expertise and capabilities.</p>
           <SkillTabSwitcher />
         </div>
       </section>
 
       {/* ── PROJECTS SECTION ─────────────────────────────────── */}
-      <section id="projects" className="py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden" style={{ background: "#080808" }}>
+      <section id="projects" className="pb-24 md:pb-32 relative overflow-hidden" style={{ background: "#080808", paddingTop: '160px', scrollMarginTop: '100px', paddingLeft: '5%', paddingRight: '5%' }}>
         {([
           { t: "5%", l: "3%", s: 2, o: 0.5 }, { t: "25%", r: "5%", s: 3, o: 0.35 },
           { t: "55%", l: "15%", s: 1, o: 0.7 }, { t: "80%", r: "12%", s: 2, o: 0.45 },
@@ -654,68 +783,98 @@ export default function Home() {
           <div key={i} className="white-dot absolute bg-white rounded-full"
             style={{ top: d.t, left: d.l, right: d.r, width: `${d.s * 4}px`, height: `${d.s * 4}px`, opacity: d.o }} />
         ))}
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full mx-auto flex flex-col items-center" style={{ maxWidth: '1280px' }}>
           <motion.h2
             className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            style={{ textAlign: 'center', width: '100%' }}
           >
-            PROJECTS
+            <span className="shiny-text">PROJECTS</span>
           </motion.h2>
-          <p className="text-gray-400 text-center mb-14 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-purple-200/80 text-center text-base sm:text-lg max-w-2xl font-medium" style={{ textAlign: 'center', margin: '0 auto 40px auto' }}>
             A collection of my academic and personal projects showcasing problem-solving, creativity, and modern technologies.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
-            {projects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
-            ))}
+          <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
+            <div
+              className="flex gap-6 animate-marquee w-max cursor-pointer hover:[animation-play-state:paused]"
+              style={{
+                animationPlayState:
+                  reelState === 'force-paused' ? 'paused' :
+                    reelState === 'force-playing' ? 'running' :
+                      undefined
+              }}
+              onMouseLeave={() => {
+                if (reelState === 'force-playing') setReelState('auto');
+              }}
+              onClick={() => {
+                if (reelState === 'auto') setReelState('force-paused');
+                else if (reelState === 'force-paused') setReelState('force-playing');
+                else setReelState('force-paused');
+              }}
+            >
+              {[...projects, ...projects].map((project, index) => (
+                <ProjectCard key={`${project.title}-${index}`} project={project} index={index} />
+              ))}
+            </div>
+
+            {/* Edge Fading Overlays */}
+            <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-[#080808] to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-[#080808] to-transparent pointer-events-none z-10" />
           </div>
         </div>
       </section>
 
       {/* ── PROFESSIONAL JOURNEY ─────────────────────────────── */}
-      <section id="work" className="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden bg-black">
-        <div className="max-w-6xl mx-auto w-full">
+      <section id="work" className="min-h-screen flex flex-col justify-center py-24 md:py-32 relative overflow-hidden bg-black">
+        <div className="w-full flex flex-col items-center z-10 px-6 md:px-12 lg:px-20 mb-12">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center"
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center shiny-text"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            JOURNEY
+            PROFESSIONAL JOURNEY
           </motion.h2>
-          <p className="text-gray-400 text-center mb-14 text-base sm:text-lg">
+          <p className="text-gray-400 text-center mb-6 text-base sm:text-lg max-w-2xl">
             Roles, responsibilities, and experiences that have shaped my career path.
           </p>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-7">
-            {workExperience.map((work, index) => (
-              <motion.div
-                key={work.title}
-                className="bg-gradient-to-br from-white/5 to-black/60 border border-gray-800 hover:border-purple-500 rounded-2xl p-8 flex flex-col gap-5 cursor-default hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)] hover:-translate-y-1.5 transition-all duration-300"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shrink-0">
-                  <Zap size={20} className="text-white" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-base font-extrabold text-white leading-snug">{work.title}</h3>
-                  <p className="text-purple-400 text-xs font-semibold tracking-wide">{work.org}</p>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed">{work.description}</p>
-              </motion.div>
+        </div>
+
+        <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
+          <div
+            className="flex gap-6 animate-marquee w-max cursor-pointer hover:[animation-play-state:paused]"
+            style={{
+              animationPlayState:
+                journeyReelState === 'force-paused' ? 'paused' :
+                  journeyReelState === 'force-playing' ? 'running' :
+                    undefined
+            }}
+            onMouseLeave={() => {
+              if (journeyReelState === 'force-playing') setJourneyReelState('auto');
+            }}
+            onClick={() => {
+              if (journeyReelState === 'auto') setJourneyReelState('force-paused');
+              else if (journeyReelState === 'force-paused') setJourneyReelState('force-playing');
+              else setJourneyReelState('force-paused');
+            }}
+          >
+            {[...journeyData, ...journeyData].map((item, index) => (
+              <JourneyCard key={`${item.title}-${index}`} item={item} index={index} onClick={() => setSelectedJourney(item)} />
             ))}
           </div>
+
+          {/* Edge Fading Overlays */}
+          <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-black to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-black to-transparent pointer-events-none z-10" />
         </div>
       </section>
 
       {/* ── CONTACT CTA ──────────────────────────────────────── */}
-      <section id="contact" className="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden">
+      <section id="contact" className="min-h-screen flex flex-col justify-center items-center w-full py-24 md:py-32 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden">
         {([
           { t: "15%", l: "10%", s: 2, o: 0.5 }, { t: "40%", r: "8%", s: 3, o: 0.35 },
           { t: "70%", l: "30%", s: 1, o: 0.7 }, { t: "85%", r: "20%", s: 2, o: 0.45 },
@@ -724,25 +883,33 @@ export default function Home() {
             style={{ top: d.t, left: d.l, right: d.r, width: `${d.s * 4}px`, height: `${d.s * 4}px`, opacity: d.o }} />
         ))}
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl w-full mx-auto flex flex-col items-center text-center relative z-10">
           <motion.h2
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-2"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-12 shiny-text"
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: { transition: { staggerChildren: 0.15 } }
+            }}
           >
-            LET&apos;S WORK
+            <motion.span
+              className="block"
+              variants={{ hidden: { opacity: 0, y: 50 }, show: { opacity: 1, y: 0, transition: { duration: 0.8 } } }}
+            >
+              LET&apos;S WORK
+            </motion.span>
+            <motion.span
+              className="block"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+            >
+              TOGETHER
+            </motion.span>
           </motion.h2>
-          <motion.p
-            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            viewport={{ once: true }}
-          >
-            TOGETHER
-          </motion.p>
 
           <motion.p
             className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
@@ -774,38 +941,104 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ───────────────────────────────────────────── */}
-      <footer className="border-t border-white/10 py-8 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">© 2025 Gulfam Afzal · Built with Next.js &amp; ❤️</p>
-          <div className="flex items-center gap-5">
-            <a
-              href="https://github.com/GulfamAfzal"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <FaGithub size={18} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/gulfam123"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn size={18} />
-            </a>
-            <a
-              href="mailto:gulfamafzal84@gmail.com"
-              className="text-gray-600 hover:text-white transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={18} />
-            </a>
+      <footer className="w-full bg-[#080808] border-t border-white/10 pt-20 pb-28 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto flex flex-col gap-12 relative z-10">
+          {/* Top Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {/* Brand/Bio */}
+            <div className="col-span-1 flex flex-col gap-4">
+              <h3 className="text-2xl font-black text-white tracking-tighter">GULFAM AFZAL</h3>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                A passionate software engineer specializing in modern web development, cybersecurity, and building intuitive digital experiences.
+              </p>
+            </div>
+            
+            {/* Quick Links */}
+            <div className="col-span-1 flex flex-col gap-4">
+              <h4 className="text-white font-bold tracking-widest text-sm uppercase">Quick Links</h4>
+              <ul className="flex flex-col gap-3 text-sm text-gray-400">
+                <li><Link href="#about" className="hover:text-purple-400 transition-colors">About</Link></li>
+                <li><Link href="#skills" className="hover:text-purple-400 transition-colors">Skills</Link></li>
+                <li><Link href="#projects" className="hover:text-purple-400 transition-colors">Projects</Link></li>
+                <li><Link href="#contact" className="hover:text-purple-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            
+            {/* Socials */}
+            <div className="col-span-1 flex flex-col gap-4">
+              <h4 className="text-white font-bold tracking-widest text-sm uppercase">Connect</h4>
+              <div className="flex items-center gap-4">
+                <a href="https://github.com/GulfamAfzal" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-purple-500 hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]" aria-label="GitHub">
+                  <FaGithub size={18} />
+                </a>
+                <a href="https://www.linkedin.com/in/gulfam123" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-500 hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]" aria-label="LinkedIn">
+                  <FaLinkedinIn size={18} />
+                </a>
+                <a href="mailto:gulfamafzal84@gmail.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:text-white transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]" aria-label="Email">
+                  <Mail size={18} />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* Bottom Divider & Copyright */}
+          <div className="w-full h-px bg-white/10" />
+          
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold tracking-wide text-gray-500">
+            <p>© {new Date().getFullYear()} Gulfam Afzal. All rights reserved.</p>
+            <p className="flex items-center gap-1">Built with Next.js & <span className="text-red-500">❤️</span></p>
           </div>
         </div>
       </footer>
+
+      {/* ── DETAILS MODAL ───────────────────────────────────────────── */}
+      <AnimatePresence>
+        {selectedJourney && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedJourney(null)}
+          >
+            <motion.div
+              className="bg-[#111] border border-white/20 rounded-2xl p-6 md:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative shadow-[0_0_50px_rgba(168,85,247,0.15)]"
+              initial={{ scale: 0.95, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
+                onClick={() => setSelectedJourney(null)}
+              >
+                <X size={20} />
+              </button>
+              
+              <h3 className="text-2xl md:text-3xl font-black text-white mb-2 pr-8">{selectedJourney.title}</h3>
+              <p className="text-purple-400 font-semibold mb-8">{selectedJourney.org}</p>
+              
+              <div className="text-gray-300 leading-relaxed text-sm md:text-base space-y-4">
+                {selectedJourney.fullText.split('\n').map((line, i) => {
+                  if (!line.trim()) return <br key={i} />;
+                  const parts = line.split(/(\[[^\]]+\]\([^)]+\))/g);
+                  return (
+                    <p key={i}>
+                      {parts.map((part, j) => {
+                        const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                        if (match) {
+                          return <a key={j} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 hover:underline">{match[1]}</a>;
+                        }
+                        return part;
+                      })}
+                    </p>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
