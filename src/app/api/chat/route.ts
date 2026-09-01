@@ -36,7 +36,7 @@ export async function POST(req: Request) {
 
     // Initialize Model
     const model = genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-3.5-flash',
       systemInstruction: `You are the friendly portfolio assistant for Gulfam Afzal. 
 Your goal is to answer questions about Gulfam's skills, professional journey, projects, and how to get in touch. 
 Keep your responses concise (1-3 sentences) because this is a small chat widget. 
@@ -54,6 +54,12 @@ Journey: Software Engineering Intern at CPBM, Freelance Web Developer.`,
         role: msg.role === 'user' ? 'user' : 'model',
         parts: [{ text: msg.content }],
       }));
+      
+      // Gemini strictly requires the history array to start with a 'user' message.
+      // If our UI sends the initial 'assistant' greeting, we must slice it out.
+      while (formattedHistory.length > 0 && formattedHistory[0].role === 'model') {
+        formattedHistory.shift();
+      }
     }
 
     const chat = model.startChat({
@@ -67,6 +73,6 @@ Journey: Software Engineering Intern at CPBM, Freelance Web Developer.`,
     return NextResponse.json({ reply: text });
   } catch (error: any) {
     console.error('Gemini API Error:', error);
-    return NextResponse.json({ error: 'Sorry, I am having trouble connecting to my brain right now. Please try again later!' }, { status: 500 });
+    return NextResponse.json({ error: error.message || 'Sorry, I am having trouble connecting to my brain right now.' }, { status: 500 });
   }
 }

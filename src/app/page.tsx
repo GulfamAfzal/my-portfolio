@@ -45,6 +45,7 @@ export type JourneyItem = {
   description: string;
   fullText: string;
   image?: string;
+  tech?: string[];
 };
 
 const journeyData: JourneyItem[] = [
@@ -52,53 +53,53 @@ const journeyData: JourneyItem[] = [
     title: "Freelance Web Developer",
     org: "Madinah Tailorshop, Saudi Arabia",
     description: "Developed a full-stack digital dashboard for a real-world client, earning a 5-star review.",
-    fullText: `Successfully delivered the 'Tailor Manager' web application for Madinah Tailorshop, a real-world client based in Saudi Arabia.\n\nThe system was designed to digitalize and streamline their daily shop operations, managing everything from customer measurements to order tracking.\n\nThe client was extremely satisfied with the intuitive UI, fast performance, and robust functionality, awarding the project a ⭐⭐⭐⭐⭐ 5-star review.\n\nThis was a fantastic experience in gathering real-world requirements, communicating effectively across borders, and delivering a production-ready application that solves real business problems!\n\n[#Freelance](https://www.linkedin.com/search/results/all/?keywords=%23freelance) [#WebDevelopment](https://www.linkedin.com/search/results/all/?keywords=%23webdevelopment) [#ClientSuccess](https://www.linkedin.com/search/results/all/?keywords=%23clientsuccess)`,
+    fullText: "Developed and delivered the 'Tailor Manager' web application for Madinah Tailorshop, a commercial client based in Saudi Arabia.\n\nThe system was designed to digitalize and streamline their daily shop operations, managing everything from customer measurements to order tracking.\n\nThe project was highly successful, receiving a 5-star review from the client for its intuitive UI, fast performance, and robust functionality. This project provided valuable experience in gathering real-world requirements, communicating effectively with international clients, and delivering a production-ready application that solves concrete business problems.",
     image: "/images/tailor_manager.jpg"
   },
   {
     title: "Internship at Century",
     org: "Century Paper & Board Mills",
     description: "Completed an internship focused on AI Automation, Networking, and Python.",
-    fullText: `I’m grateful to share that I have successfully completed my Software Engineering Internship at Century Paper & Board Mills Limited (CPBM), Lahore.\n\nThis internship was a valuable opportunity to move beyond academic concepts and experience how real industry-level products, projects, and IT infrastructure are designed, deployed, monitored, and managed in a professional environment.\n\nDuring my internship, I had the opportunity to learn and work in several areas, including AI Automation, AI Agents, n8n, Networking, Python, and Network Monitoring.\n\n🔹 Network Monitoring & Automation "NetPulse"\nOne of our major team projects was NetPulse, an enterprise-focused network monitoring and automation platform.\n\nWorking with [Muhammad Faisal Bin Afzal](https://www.linkedin.com/in/mfaisalbinafzal/), [Zohaib Ahmed](https://www.linkedin.com/in/zohaib-ahmed-a99614318/), [Reeha Batool](https://www.linkedin.com/in/reehabatool/) worked on real networking environments involving switches and routers. The project focuses on monitoring network infrastructure, discovering and tracking devices, checking device availability and performance, monitoring switch interfaces, and providing centralized visibility of the network.\n\nWe also explored SSH-based switch management, interface discovery, network information, and broadcast-storm detection with risk-based monitoring and safety checks.\n\nThis project gave us valuable hands-on exposure to how networking infrastructure is actually managed in an industrial environment.\n\n🔗 GitHub: [https://lnkd.in/d3FYjKzi](https://lnkd.in/d3FYjKzi)\n\n🔹 CV Reviewer\nI also worked with Reeha Batool on a CV Reviewer project, where we explored how AI can be used to analyze CVs and provide meaningful feedback to improve them.\n\nWorking on this project helped me understand the practical application of AI in developing useful software solutions.\n\n🔗 Github : [https://lnkd.in/dn2dW2W3](https://lnkd.in/dn2dW2W3)\n\nI would like to sincerely thank my teammates [Muhammad Faisal Bin Afzal](https://www.linkedin.com/in/mfaisalbinafzal/), [Zohaib Ahmed](https://www.linkedin.com/in/zohaib-ahmed-a99614318/), [Reeha Batool](https://www.linkedin.com/in/reehabatool/) and [Ahmad Sharjeel](https://www.linkedin.com/in/i-ahmad615/) for their collaboration, support, and contribution throughout these projects.\n\nA special thanks to Sir Waqas and Sir Ghazanfer Madni for their guidance and mentorship. Their support helped us understand not only the technical aspects of our projects but also how things are approached in a real professional environment.\n\nI am also thankful to the Placement Center, especially Sir [Adnan Bashir](https://www.linkedin.com/in/adnan-bashir-5167786/) and Sir [Muhammad Bilal](https://www.linkedin.com/in/mbilal09/), for their efforts and for providing us with this valuable opportunity.\n\nOverall, this internship was an incredible learning experience. It gave me practical exposure to AI automation, AI agents, n8n, Python, networking, switches, routers, network monitoring, and industry-level software projects, while also helping me understand how technology is used to solve real organizational problems.\n\nI’m thankful to everyone who contributed to making this experience meaningful. Looking forward to applying these learnings to future projects and opportunities. 🚀\n\n[#Internship](https://www.linkedin.com/search/results/all/?keywords=%23internship&origin=HASH_TAG_FROM_FEED) [#CPBM](https://www.linkedin.com/search/results/all/?keywords=%23cpbm&origin=HASH_TAG_FROM_FEED) [#Networking](https://www.linkedin.com/search/results/all/?keywords=%23networking&origin=HASH_TAG_FROM_FEED) [#CyberSecurity](https://www.linkedin.com/search/results/all/?keywords=%23cybersecurity&origin=HASH_TAG_FROM_FEED) [#Python](https://www.linkedin.com/search/results/all/?keywords=%23python&origin=HASH_TAG_FROM_FEED) [#AIAutomation](https://www.linkedin.com/search/results/all/?keywords=%23aiautomation&origin=HASH_TAG_FROM_FEED) [#NetworkAutomation](https://www.linkedin.com/search/results/all/?keywords=%23networkautomation&origin=HASH_TAG_FROM_FEED)`,
+    fullText: "Completed a comprehensive Software Engineering Internship at Century Paper & Board Mills Limited (CPBM), Lahore. This role provided hands-on experience in moving beyond academic concepts to see how real industry-level products, IT infrastructure, and networks are designed, deployed, monitored, and managed.\n\nKey areas of focus included AI Automation, AI Agents, n8n, Python, and Network Monitoring.\n\n🔹 Network Monitoring & Automation (NetPulse)\nCo-developed NetPulse, an enterprise-focused network monitoring and automation platform. The project involved monitoring network infrastructure, discovering devices, checking performance, and providing centralized visibility. We implemented SSH-based switch management, interface discovery, and broadcast-storm detection with risk-based safety checks.\n🔗 GitHub: [NetPulse](https://lnkd.in/d3FYjKzi)\n\n🔹 CV Reviewer\nCo-developed a CV Reviewer application utilizing AI to analyze resumes and provide actionable feedback for improvement.\n🔗 GitHub: [CV Reviewer](https://lnkd.in/dn2dW2W3)\n\nThis internship provided incredible practical exposure to solving real organizational problems through automation, Python, and networking infrastructure.",
     image: "/images/internshp.png"
   },
   {
     title: "Guest Speaker",
     org: "IEEE RAS COMSATS Wah",
     description: "Delivered a session on creating professional presentations using Canva.",
-    fullText: `🎉 Honored to Share This Achievement!\n\nI am truly honored to have been invited as a Guest Speaker by IEEE Robotics and Automation Society (RAS), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, to deliver a session on: "Introduction to Canva and How to Create Professional Presentations Using Canva."\n\nIt was a wonderful opportunity to share practical techniques for designing impactful, professional presentations while engaging with talented and enthusiastic students. Seeing their curiosity and creativity made this experience truly rewarding.\n\nI would like to express my sincere gratitude to [IEEE](https://www.linkedin.com/company/ieee/), [IEEE Robotics and Automation Society](https://www.linkedin.com/company/ieee-ras/), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, and the organizing team for their warm hospitality and for presenting me with a Certificate of Appreciation. This recognition motivates me to continue contributing to the community through knowledge sharing and professional development.\n\nA special thanks to [SYED ARSALAN](https://www.linkedin.com/in/syed-arsalan-9a122525a/) (Vice Chairperson, [IEEE RAS CUI Wah](https://www.linkedin.com/company/ieee-ras-cui-wah/) Chapter) for the invitation, excellent coordination, and for making this session a success.\n\nI look forward to collaborating on more workshops, seminars, and opportunities that inspire learning, creativity, and innovation.\n\n[#IEEE](https://www.linkedin.com/search/results/all/?keywords=%23ieee) [#RoboticsAndAutomation](https://www.linkedin.com/search/results/all/?keywords=%23roboticsandautomation) [#Canva](https://www.linkedin.com/search/results/all/?keywords=%23canva) [#PublicSpeaking](https://www.linkedin.com/search/results/all/?keywords=%23publicspeaking)`,
+    fullText: "Served as a Guest Speaker for the IEEE Robotics and Automation Society (RAS) at COMSATS University Islamabad, Wah Campus.\n\nDelivered an interactive session titled: 'Introduction to Canva and How to Create Professional Presentations.' The session focused on teaching students practical techniques for designing impactful, professional presentations and visual content.\n\nReceived a Certificate of Appreciation from the organizing chapter for contributing to the community through knowledge sharing, technical mentorship, and professional development.",
     image: "/images/Guest_speaker.jpg"
   },
   {
     title: "2nd Runner-Up",
     org: "Aurax Speed Programming",
     description: "Secured 2nd Runner-Up at Bahria University speed programming competition.",
-    fullText: `Proud to share that I secured 2nd Runner-Up in an Aurax Speed Programming Competition held at [Bahria University](https://www.linkedin.com/company/bahria-university/), Islamabad, alongside my teammate [Usman Ghani](https://www.linkedin.com/in/usmanghanics/)\n\nCompeting against participants from 25+ universities was honestly both challenging and exciting; every problem pushed us to think faster, stay calm, and trust our teamwork.\n\nGrateful to [Namal University](https://www.linkedin.com/company/namal-university-mianwali/) for their continued support and for the opportunity to represent and grow.\n\nOne important takeaway from this experience: in real competitions, you can’t rely on AI or external help, it’s your logic, practice, and problem-solving mindset that truly matter. Tools can support learning, but they can’t replace the ability to think under pressure.\n\nMoments like these remind me how much there is still to learn, and that’s the best part of this journey. Looking forward to improving and coming back even stronger\n\n[#Programming](https://www.linkedin.com/search/results/all/?keywords=%23programming) [#ProblemSolving](https://www.linkedin.com/search/results/all/?keywords=%23problemsolving)`,
+    fullText: "Secured 2nd Runner-Up in the Aurax Speed Programming Competition held at Bahria University, Islamabad.\n\nCompeted alongside a teammate against participants from over 25 universities in a highly competitive environment. The competition tested rapid problem-solving, algorithmic thinking, and teamwork under strict time constraints.\n\nThis experience reinforced the importance of core logic, consistent practice, and the ability to think critically without relying on external AI tools in high-pressure scenarios.",
     image: "/images/2nd_Runnerup.png"
   },
   {
     title: "Graphic Designer",
     org: "IEEE Islamabad Section",
     description: "Serving as Graphic Designer for the IEEE Islamabad Section.",
-    fullText: `I am currently serving as the Graphic Designer of the IEEE Islamabad Section. It has been a fantastic experience creating visual content and contributing to the community.`,
+    fullText: "Currently serving as the Graphic Designer for the IEEE Islamabad Section. Responsible for conceptualizing and creating high-quality visual content, marketing materials, and digital assets to support and promote community events, workshops, and technical initiatives across the section.",
     image: "/images/IEEE_Isb.png"
   },
   {
     title: "Student Ambassador",
     org: "Namal University",
     description: "Represented Namal University during BS Admissions Outreach Campaign.",
-    fullText: `I had the privilege to represent Namal University during our recent BS Admissions Outreach Campaign held from 11–13 February 2026 in Okara, Sahiwal, and Depalpur.\n\nWe visited multiple colleges and engaged with 2nd-year students to guide them about academic programs, scholarships, and student life at Namal. During the sessions, we highlighted Namal’s modern infrastructure, industry-oriented curriculum, and strong focus on market-driven skills aligned with current industry demands.\n\nInteracting with aspiring students, addressing their queries, and presenting the vision and opportunities at Namal was a truly enriching experience. This outreach not only allowed me to contribute to my university but also significantly enhanced my communication, leadership, and presentation skills.\n\nGrateful for the opportunity and looking forward to more impactful engagements ahead.\n\n[#NamalUniversity](https://www.linkedin.com/search/results/all/?keywords=%23namaluniversity) [#StudentAmbassador](https://www.linkedin.com/search/results/all/?keywords=%23studentambassador)`,
+    fullText: "Represented Namal University as a Student Ambassador during the BS Admissions Outreach Campaign across multiple cities (Okara, Sahiwal, and Depalpur).\n\nEngaged directly with prospective students at various colleges to guide them regarding academic programs, scholarships, and student life. Actively highlighted the university's modern infrastructure, industry-oriented curriculum, and focus on market-driven skills.\n\nThis role significantly enhanced my public speaking, leadership, and professional communication skills while allowing me to positively impact the educational journeys of aspiring students.",
     image: "/images/OutReach.jpg"
   },
-  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events.", fullText: "Actively participating in IEEE community activities and contributing to technical events.", image: "/images/ieee.png" },
-  { title: "Teaching Assistant", org: "Namal University — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments.", fullText: "Guided students in Object-Oriented Programming concepts and assignments.", image: "/images/ta.png" },
-  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International.", fullText: "Worked on design projects and visual content for Rinova International.", image: "/images/Rinova.jpg" },
-  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers.", fullText: "Produced a video for UNESCO's Water Competition focused on glaciers.", image: "/images/Vedio.jpg" },
+  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events.", fullText: "Actively participating in IEEE community activities and contributing to technical events. Assisting in the organization and execution of workshops and seminars to promote technological innovation.", image: "/images/ieee.png" },
+  { title: "Teaching Assistant", org: "Namal University — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments.", fullText: "Served as a Teaching Assistant for Object-Oriented Programming (OOP). Guided students in understanding core programming concepts, evaluated assignments, and provided mentorship to help peers improve their coding and software design skills.", image: "/images/ta.png" },
+  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International.", fullText: "Worked on various design projects and created compelling visual content for Rinova International, helping establish their brand identity and digital presence.", image: "/images/Rinova.jpg" },
+  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers.", fullText: "Produced, directed, and edited a compelling video submission for UNESCO's Water Competition. The project focused on raising awareness about glaciers and water conservation efforts.", image: "/images/Vedio.jpg" },
   {
     title: "4th Position - Cybersecurity",
     org: "Team RDX Workshop",
     description: "Secured 4th position overall in a 3-day Cybersecurity Workshop CTF.",
-    fullText: `Team RDX from FAST University Islamabad recently conducted a 3-day Cybersecurity Workshop at our campus.\n\nSpecial thanks to [Hafiz Muhammad Ibrahim Iqbal](https://www.linkedin.com/in/hafiz-muhammad-ibrahim-iqbal-29389429b/), the head of the team, for leading the workshop and sharing valuable knowledge.\n\nThe workshop included daily challenges with a live scoreboard to track our progress. I’m glad to share that I secured 4th position overall in the competition.\n\nGrateful for this learning experience and looking forward to applying these skills further! 🚀🔐\n\n[#CyberSecurity](https://www.linkedin.com/search/results/all/?keywords=%23cybersecurity) [#CTF](https://www.linkedin.com/search/results/all/?keywords=%23ctf)`,
+    fullText: "Secured 4th position overall in a highly competitive 3-day Cybersecurity Workshop CTF, organized by Team RDX from FAST University Islamabad.\n\nThe intensive workshop covered advanced security concepts, vulnerability assessments, and daily Capture The Flag (CTF) challenges with a live leaderboard. Successfully applied theoretical security knowledge to practical, hands-on exploitation and defense scenarios.",
     image: "/images/4th position.jpg"
   }
 ];
@@ -108,42 +109,42 @@ const certificationData: JourneyItem[] = [
     title: "Python for Everybody",
     org: "Dr. Charles Severance",
     description: "Successfully completed the Python fundamentals and APIs course.",
-    fullText: `Excited to share that I have successfully completed the “Python for Everybody” course by Dr. Charles Severance (Dr. Chuck)! 🐍\n\nThis journey deepened my understanding of Python fundamentals, data structures, web scraping, and working with APIs. I’m now even more confident in applying Python to real-world projects and problem-solving.`,
+    fullText: "Successfully completed the 'Python for Everybody' certification by Dr. Charles Severance.\n\nThis comprehensive program solidified core programming skills, covering Python fundamentals, complex data structures, web scraping, and API integrations. The coursework provided a strong foundation for applying Python to real-world software engineering projects and automated problem-solving.",
     image: "/images/Python.jpg"
   },
   {
     title: "Linux & Shell Scripting",
     org: "IBM (Coursera)",
     description: "Completed Hands-on Introduction to Linux Commands and Shell Scripting.",
-    fullText: `Excited to share that I have successfully completed the “Hands-on Introduction to Linux Commands and Shell Scripting” course, authorized by IBM and offered through Coursera.\n\nThis course helped me strengthen my skills in Linux, shell scripting, and command-line operations — a valuable step forward in my journey toward cybersecurity and system administration.`,
+    fullText: "Completed the 'Hands-on Introduction to Linux Commands and Shell Scripting' certification, authorized by IBM via Coursera.\n\nGained practical, hands-on experience in Linux environments, Bash shell scripting, and command-line system operations. This certification serves as a critical foundation for advanced work in cybersecurity, system administration, and automated deployment pipelines.",
     image: "/images/Linux.jpg"
   },
   {
     title: "System & Network Security",
     org: "LearnKartS (Coursera)",
     description: "Deepened understanding of IoT security, scanning, and network resilience.",
-    fullText: `Thrilled to share that I have successfully completed the System and Network Security course by LearnKartS through Coursera.\n\nThis course deepened my understanding of:\n🔹 IoT security methodologies\n🔹 Network scanning & vulnerability assessment\n🔹 DDoS, jamming, and rolling code attacks\n🔹 Best practices for securing connected systems\n\nCybersecurity isn’t just about defense — it’s about staying ahead. Excited to apply these skills to build stronger, safer, and more resilient networks. 💻`,
+    fullText: "Completed the 'System and Network Security' certification by LearnKartS via Coursera.\n\nDeveloped a deep understanding of modern security challenges, including IoT security methodologies, network scanning, vulnerability assessment, and attack vectors such as DDoS, jamming, and rolling code attacks.\n\nThe coursework emphasized proactive defense strategies and best practices for securing connected systems and building highly resilient enterprise networks.",
     image: "/images/Networksecurity.jpg"
   },
   {
     title: "C++ Patterns: Creational",
     org: "Software Engineering",
     description: "Deepened understanding of creational design patterns in C++.",
-    fullText: `I am excited to have completed the "C++ Design Patterns: Creational" course as part of my software engineering assignment! This course deepened my understanding of key design patterns and their implementation in C++, a crucial skill for creating robust and scalable software systems.\n\nA special thanks to [Asiya Batool](https://www.linkedin.com/in/asiya-batool-125079340/) for her insightful guidance and support. Your expertise and encouragement have been invaluable in this learning journey!`,
+    fullText: "Completed the 'C++ Design Patterns: Creational' certification to deepen expertise in software architecture.\n\nMastered key creational design patterns (such as Singleton, Factory, and Builder) and their practical implementation in C++. This training focused on writing robust, scalable, and memory-efficient software systems by standardizing object creation mechanisms.",
     image: "/images/C++ Creational.jpg"
   },
   {
     title: "C++ Patterns: Behavioral",
     org: "LinkedIn Learning",
     description: "Mastered behavioral design patterns for object interactions.",
-    fullText: `Thrilled to share that I’ve completed the C++ Design Patterns: Behavioral course on LinkedIn Learning!\n\nThis course provided deep insights into designing robust and scalable software by mastering behavioral design patterns. These patterns help in:\n- Managing object interactions and responsibilities efficiently.\n- Writing cleaner, more maintainable, and flexible C++ code.\n- Leveraging patterns like Strategy, Observer, Command, State, and more to solve real-world programming challenges.`,
+    fullText: "Completed the 'C++ Design Patterns: Behavioral' certification, focusing on advanced software architecture.\n\nGained deep insights into managing complex object interactions and responsibilities efficiently. Mastered behavioral patterns including Strategy, Observer, Command, and State, enabling the development of cleaner, more maintainable, and highly flexible C++ codebases for real-world programming challenges.",
     image: "/images/C++ Behavioural.jpg"
   },
   {
     title: "C++ Patterns: Structural",
     org: "LinkedIn Learning",
     description: "Explored structural patterns for organizing object relationships.",
-    fullText: `I’ve recently completed the C++ Design Patterns: Structural course on LinkedIn Learning as part of our Software Engineering assignment.\n\nThis course deepened my understanding of structural design patterns, which are essential for organizing and simplifying relationships between objects and classes. Key concepts I explored include:\n\n1. Adapter Pattern: Bridging incompatible interfaces for seamless integration.\n2. Composite Pattern: Managing object hierarchies by treating individual and grouped objects uniformly.\n3. Decorator Pattern: Adding features dynamically to objects without altering their structure.\n4. Facade Pattern: Providing simplified interfaces to complex subsystems.\n5. Proxy Pattern: Controlling access to objects for security, logging, or performance enhancements.`,
+    fullText: "Completed the 'C++ Design Patterns: Structural' certification to strengthen architectural design skills.\n\nFocused on organizing and simplifying relationships between software entities. Explored and implemented structural patterns including the Adapter (bridging incompatible interfaces), Composite (managing object hierarchies), Decorator (dynamic feature addition), Facade (simplifying complex subsystems), and Proxy (controlling access for security and performance).",
     image: "/images/C++ Structural.jpg"
   }
 ];
@@ -193,7 +194,9 @@ const motivationalQuotes = [
 
 function InfiniteScrollReel({ children, direction = 'left', speed = 1 }: { children: React.ReactNode, direction?: 'left' | 'right', speed?: number }) {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isHoverPaused, setIsHoverPaused] = useState(false);
+  const [manualPause, setManualPause] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     let animationId: number;
@@ -211,52 +214,62 @@ function InfiniteScrollReel({ children, direction = 'left', speed = 1 }: { child
       const delta = time - lastTime;
       lastTime = time;
 
+      const isPaused = isHoverPaused || manualPause;
+
       if (!isPaused) {
         const scrollAmount = (speed * delta) / 16.66;
-        
+
         if (direction === 'left') {
-           accumulatedScroll += scrollAmount;
-           if (accumulatedScroll >= 1) {
-             scrollNode.scrollLeft += Math.floor(accumulatedScroll);
-             accumulatedScroll -= Math.floor(accumulatedScroll);
-           }
-           if (scrollNode.scrollLeft >= scrollNode.scrollWidth / 2) {
-             scrollNode.scrollLeft -= scrollNode.scrollWidth / 2;
-           }
+          accumulatedScroll += scrollAmount;
+          if (accumulatedScroll >= 1) {
+            scrollNode.scrollLeft += Math.floor(accumulatedScroll);
+            accumulatedScroll -= Math.floor(accumulatedScroll);
+          }
+          if (scrollNode.scrollLeft >= scrollNode.scrollWidth / 2) {
+            scrollNode.scrollLeft -= scrollNode.scrollWidth / 2;
+          }
         } else {
-           accumulatedScroll += scrollAmount;
-           if (accumulatedScroll >= 1) {
-             scrollNode.scrollLeft -= Math.floor(accumulatedScroll);
-             accumulatedScroll -= Math.floor(accumulatedScroll);
-           }
-           if (scrollNode.scrollLeft <= 0) {
-             scrollNode.scrollLeft += scrollNode.scrollWidth / 2;
-           }
+          accumulatedScroll += scrollAmount;
+          if (accumulatedScroll >= 1) {
+            scrollNode.scrollLeft -= Math.floor(accumulatedScroll);
+            accumulatedScroll -= Math.floor(accumulatedScroll);
+          }
+          if (scrollNode.scrollLeft <= 0) {
+            scrollNode.scrollLeft += scrollNode.scrollWidth / 2;
+          }
         }
       }
       animationId = requestAnimationFrame(scroll);
     };
     animationId = requestAnimationFrame(scroll);
     return () => cancelAnimationFrame(animationId);
-  }, [isPaused, direction, speed]);
+  }, [isHoverPaused, manualPause, direction, speed]);
+
+  const handleManualInteraction = () => {
+    setManualPause(true);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => setManualPause(false), 4000);
+  };
 
   const scrollLeftClick = () => {
-    if (scrollRef.current) scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    handleManualInteraction();
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: -680, behavior: 'smooth' });
   };
   const scrollRightClick = () => {
-    if (scrollRef.current) scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    handleManualInteraction();
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: 680, behavior: 'smooth' });
   };
 
   return (
     <div className="w-full relative group py-4" style={{ marginBottom: '40px' }}>
-      <div 
-         ref={scrollRef} 
-         className="flex gap-6 overflow-x-auto no-scrollbar w-max pr-8"
-         onMouseEnter={() => setIsPaused(true)}
-         onMouseLeave={() => setIsPaused(false)}
-         onTouchStart={() => setIsPaused(true)}
-         onTouchEnd={() => setIsPaused(false)}
-         style={{ width: '100%' }}
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-hidden w-max pr-8"
+        onMouseEnter={() => setIsHoverPaused(true)}
+        onMouseLeave={() => setIsHoverPaused(false)}
+        onTouchStart={() => setIsHoverPaused(true)}
+        onTouchEnd={() => setIsHoverPaused(false)}
+        style={{ width: '100%' }}
       >
         <div className="flex gap-6 w-max">
           {children}
@@ -268,12 +281,12 @@ function InfiniteScrollReel({ children, direction = 'left', speed = 1 }: { child
       <div className="absolute inset-y-0 right-0 w-[10%] bg-gradient-to-l from-black to-transparent pointer-events-none z-10" />
 
       {/* Manual Scroll Controls */}
-      <div className="flex justify-center items-center gap-6 mt-8 w-full relative z-20">
-        <button onClick={scrollLeftClick} className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white/10 hover:border-[#a855f7] transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
-          <ChevronLeft size={24} className="text-white" />
+      <div className="flex justify-center items-center gap-6 w-full relative z-20" style={{ paddingTop: '36px' }}>
+        <button onClick={scrollLeftClick} aria-label="Scroll Left" className="w-12 h-12 rounded-full bg-white flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+          <ChevronLeft size={24} className="text-black" />
         </button>
-        <button onClick={scrollRightClick} className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white/10 hover:border-[#a855f7] transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
-          <ChevronRight size={24} className="text-white" />
+        <button onClick={scrollRightClick} aria-label="Scroll Right" className="w-12 h-12 rounded-full bg-white flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+          <ChevronRight size={24} className="text-black" />
         </button>
       </div>
     </div>
@@ -387,21 +400,22 @@ function SkillTabSwitcher() {
 
 // ─── 3D TILT PROJECT CARD ─────────────────────────────────────────────────────
 
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index, onClick }: { project: typeof projects[0]; index: number; onClick?: () => void }) {
   return (
     <motion.div
-      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm"
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[#a855f7] hover:ring-2 hover:ring-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
       viewport={{ once: true }}
+      onClick={onClick}
     >
-      <div className="w-full h-40 relative overflow-hidden bg-black">
+      <div className="w-full h-40 relative overflow-hidden bg-transparent">
         <Image src={project.image || "/images/portfolio.png"} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
       </div>
 
-      <div className="flex-1 flex flex-col" style={{ padding: '24px' }}>
+      <div className="flex-1 flex flex-col" style={{ padding: '6px 24px 24px 24px' }}>
         <h3 className="text-[18px] sm:text-[20px] font-bold text-white mb-3 line-clamp-1">{project.title}</h3>
         <p className="text-[#9ca3af] text-[14px] leading-relaxed mb-4 line-clamp-2">
           {project.description}
@@ -426,19 +440,19 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 function JourneyCard({ item, index, onClick }: { item: JourneyItem; index: number; onClick: () => void }) {
   return (
     <motion.div
-      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[#a855f7] hover:ring-2 hover:ring-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
       viewport={{ once: true }}
       onClick={onClick}
     >
-      <div className="w-full h-40 relative overflow-hidden bg-black">
+      <div className="w-full h-40 relative overflow-hidden bg-transparent">
         <Image src={item.image || "/images/portfolio.png"} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
       </div>
 
-      <div className="flex-1 flex flex-col" style={{ padding: '24px' }}>
+      <div className="flex-1 flex flex-col" style={{ padding: '6px 24px 24px 24px' }}>
         <h3 className="text-[18px] sm:text-[20px] font-bold text-white mb-3 line-clamp-1">{item.title}</h3>
         <p className="text-[#9ca3af] text-[14px] leading-relaxed mb-4 line-clamp-2">
           {item.description}
@@ -469,6 +483,16 @@ export default function Home() {
   const [statTab, setStatTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedJourney, setSelectedJourney] = useState<JourneyItem | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedJourney(null);
+    };
+    if (selectedJourney) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedJourney]);
 
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "60%"]);
@@ -884,7 +908,7 @@ export default function Home() {
           <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
             <InfiniteScrollReel direction="left">
               {[...projects, ...projects, ...projects, ...projects].map((project, index) => (
-                <ProjectCard key={`${project.title}-${index}`} project={project} index={index} />
+                <ProjectCard key={`${project.title}-${index}`} project={project} index={index} onClick={() => setSelectedJourney({ title: project.title, org: "Project", description: project.description, fullText: project.description, image: project.image, tech: project.tech })} />
               ))}
             </InfiniteScrollReel>
           </div>
@@ -1018,7 +1042,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ───────────────────────────────────────────── */}
-      <footer className="w-full bg-[#080808] border-t border-white/10 pt-20 pb-28 px-6 md:px-12 lg:px-20 relative overflow-hidden">
+      <footer className="w-full bg-[#080808] border-t border-white/10 pt-[120px] pb-28 px-6 md:px-12 lg:px-20 relative overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col gap-12 relative z-10">
           {/* Top Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
@@ -1069,45 +1093,72 @@ export default function Home() {
       <AnimatePresence>
         {selectedJourney && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/70 backdrop-blur-[8px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedJourney(null)}
           >
             <motion.div
-              className="bg-[#111] border border-white/20 rounded-2xl p-6 md:p-10 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative shadow-[0_0_50px_rgba(168,85,247,0.15)]"
-              initial={{ scale: 0.95, y: 20 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.95, y: 20 }}
+              className="bg-gradient-to-b from-[#111] to-[#141414] border border-white/10 rounded-[24px] w-full max-w-[680px] max-h-[90vh] overflow-y-auto relative shadow-[0_20px_60px_-15px_rgba(0,0,0,1),0_0_40px_rgba(168,85,247,0.15)] flex flex-col box-border"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                className="absolute top-4 right-4 p-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
-                onClick={() => setSelectedJourney(null)}
-              >
-                <X size={20} />
-              </button>
+              {selectedJourney.image && (
+                <div className="w-full h-[280px] sm:h-[320px] relative overflow-hidden rounded-t-[24px] shrink-0 bg-black/50">
+                  <Image key={selectedJourney.image} src={selectedJourney.image} alt={selectedJourney.title} fill className="object-contain object-center" />
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#111] to-transparent pointer-events-none" />
+                </div>
+              )}
 
-              <h3 className="text-2xl md:text-3xl font-black text-white mb-2 pr-8">{selectedJourney.title}</h3>
-              <p className="text-purple-400 font-semibold mb-8">{selectedJourney.org}</p>
+              <div className="p-[28px] md:p-[32px] w-full box-border flex-1 flex flex-col">
+                <div className="flex flex-row justify-between items-start gap-4 mb-3">
+                  <h3 className="text-2xl md:text-3xl font-black text-white break-words">{selectedJourney.title}</h3>
+                  <button
+                    className="w-10 h-10 shrink-0 rounded-full bg-white/5 hover:bg-white/15 hover:scale-105 flex items-center justify-center text-gray-400 hover:text-white transition-all outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                    onClick={() => setSelectedJourney(null)}
+                    aria-label="Close details"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
 
-              <div className="text-gray-300 leading-relaxed text-sm md:text-base space-y-4">
-                {selectedJourney.fullText.split('\n').map((line, i) => {
-                  if (!line.trim()) return <br key={i} />;
-                  const parts = line.split(/(\[[^\]]+\]\([^)]+\))/g);
-                  return (
-                    <p key={i}>
-                      {parts.map((part, j) => {
-                        const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
-                        if (match) {
-                          return <a key={j} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 hover:underline">{match[1]}</a>;
-                        }
-                        return part;
-                      })}
-                    </p>
-                  );
-                })}
+                <div className="mb-4">
+                  <span className="bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full px-3 py-1 text-sm font-semibold inline-block break-words max-w-full">
+                    {selectedJourney.org}
+                  </span>
+                </div>
+
+                <div className="text-[#9ca3af] text-base leading-[1.6] space-y-[16px] w-full break-words">
+                  {selectedJourney.fullText.split('\n').map((line, i) => {
+                    if (!line.trim()) return null;
+                    const parts = line.split(/(\[[^\]]+\]\([^)]+\))/g);
+                    return (
+                      <p key={i}>
+                        {parts.map((part, j) => {
+                          const match = part.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                          if (match) {
+                            return <a key={j} href={match[2]} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 hover:underline">{match[1]}</a>;
+                          }
+                          return part;
+                        })}
+                      </p>
+                    );
+                  })}
+                </div>
+
+                {selectedJourney.tech && selectedJourney.tech.length > 0 && (
+                  <div className="mt-8 flex flex-wrap gap-2 pt-6 border-t border-white/10 shrink-0 w-full">
+                    {selectedJourney.tech.map((t, i) => (
+                      <span key={t} className="text-[11px] font-semibold tracking-wider border rounded-full px-2.5 py-1 bg-white/5 text-gray-300 border-white/10">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>
