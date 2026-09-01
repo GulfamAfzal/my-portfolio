@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
   Mail, Code, Zap, Globe, Shield,
-  ArrowRight, ChevronDown, Menu, X, Download,
+  ArrowRight, ChevronDown, Menu, X, Download, ChevronLeft, ChevronRight
 } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
@@ -22,7 +22,7 @@ const projects = [
   { title: "ATS-CV-Reviewer", description: "AI-powered Applicant Tracking System and CV Reviewer using Gemini AI.", tech: ["Python", "Gemini AI", "n8n"], link: "#", image: "/images/ats_cv_reviewer.jpg" },
   { title: "Network Device Monitor", description: "Industrial Network Device Monitoring System with real-time tracking.", tech: ["Flask", "SQLite", "JavaScript"], link: "#", image: "/images/network_monitor.jpg" },
   { title: "Omnilink Ecommerce Core", description: "Robust e-commerce backend system architecture and API.", tech: ["JavaScript"], link: "#", image: "/images/ecommerce_core.jpg" },
-  { title: "Fullstack ToDo App", description: "Feature-rich To-Do app with SSR and WebSockets integration.", tech: ["Next.js", "SQLite3", "TypeScript"], link: "#", image: "/images/todo_app.jpg" },
+
   { title: "Keylogger", description: "A keylogger built as a system monitoring experiment.", tech: ["Assembly Language"], link: "#", image: "/images/keylogger.jpg" },
   { title: "History of Pakistan Web App", description: "A web application to showcase the history of Pakistan.", tech: ["React.js", "Tailwind CSS", "MySQL"], link: "#", image: "/images/pakistan.png" },
   { title: "File Compression Tool", description: "A tool to compress and decompress files using Huffman coding.", tech: ["C++", "Algorithms"], link: "#", image: "/images/file.jpg" },
@@ -35,7 +35,7 @@ const projects = [
   { title: "E-Wallet", description: "An object-oriented C++ project simulating digital wallet operations.", tech: ["C++", "OOP"], link: "#", image: "/images/wallet.png" },
   { title: "Syncera — Skill Exchange Platform", description: "A software engineering project for a skill exchange platform.", tech: ["Software Engineering"], link: "#", image: "/images/skill.jpg" },
   { title: "BCD Calculator", description: "Digital Logic Design project to implement a BCD calculator.", tech: ["DLD", "C++"], link: "#", image: "/images/BCD.png" },
-  { title: "Tailor Manager", description: "A digital dashboard web application for managing tailor shop operations.", tech: ["JavaScript"], link: "#", image: "/images/tailor_manager.jpg" },
+  { title: "Tailor Manager", description: "Built for a real client (Madinah Tailorshop, KSA) for daily operations. ⭐⭐⭐⭐⭐ 5-star review.", tech: ["JavaScript"], link: "#", image: "/images/tailor_manager.jpg" },
   { title: "File Integrity Checker", description: "Cybersecurity tool to detect unauthorized file modifications via hashing.", tech: ["Python", "SHA-256"], link: "#", image: "/images/file_integrity.jpg" },
 ];
 
@@ -48,87 +48,104 @@ export type JourneyItem = {
 };
 
 const journeyData: JourneyItem[] = [
-  { 
-    title: "Guest Speaker", 
-    org: "IEEE RAS COMSATS Wah", 
-    description: "Delivered a session on creating professional presentations using Canva.", 
+  {
+    title: "Freelance Web Developer",
+    org: "Madinah Tailorshop, Saudi Arabia",
+    description: "Developed a full-stack digital dashboard for a real-world client, earning a 5-star review.",
+    fullText: `Successfully delivered the 'Tailor Manager' web application for Madinah Tailorshop, a real-world client based in Saudi Arabia.\n\nThe system was designed to digitalize and streamline their daily shop operations, managing everything from customer measurements to order tracking.\n\nThe client was extremely satisfied with the intuitive UI, fast performance, and robust functionality, awarding the project a ⭐⭐⭐⭐⭐ 5-star review.\n\nThis was a fantastic experience in gathering real-world requirements, communicating effectively across borders, and delivering a production-ready application that solves real business problems!\n\n[#Freelance](https://www.linkedin.com/search/results/all/?keywords=%23freelance) [#WebDevelopment](https://www.linkedin.com/search/results/all/?keywords=%23webdevelopment) [#ClientSuccess](https://www.linkedin.com/search/results/all/?keywords=%23clientsuccess)`,
+    image: "/images/tailor_manager.jpg"
+  },
+  {
+    title: "Internship at Century",
+    org: "Century Paper & Board Mills",
+    description: "Completed an internship focused on AI Automation, Networking, and Python.",
+    fullText: `I’m grateful to share that I have successfully completed my Software Engineering Internship at Century Paper & Board Mills Limited (CPBM), Lahore.\n\nThis internship was a valuable opportunity to move beyond academic concepts and experience how real industry-level products, projects, and IT infrastructure are designed, deployed, monitored, and managed in a professional environment.\n\nDuring my internship, I had the opportunity to learn and work in several areas, including AI Automation, AI Agents, n8n, Networking, Python, and Network Monitoring.\n\n🔹 Network Monitoring & Automation "NetPulse"\nOne of our major team projects was NetPulse, an enterprise-focused network monitoring and automation platform.\n\nWorking with [Muhammad Faisal Bin Afzal](https://www.linkedin.com/in/mfaisalbinafzal/), [Zohaib Ahmed](https://www.linkedin.com/in/zohaib-ahmed-a99614318/), [Reeha Batool](https://www.linkedin.com/in/reehabatool/) worked on real networking environments involving switches and routers. The project focuses on monitoring network infrastructure, discovering and tracking devices, checking device availability and performance, monitoring switch interfaces, and providing centralized visibility of the network.\n\nWe also explored SSH-based switch management, interface discovery, network information, and broadcast-storm detection with risk-based monitoring and safety checks.\n\nThis project gave us valuable hands-on exposure to how networking infrastructure is actually managed in an industrial environment.\n\n🔗 GitHub: [https://lnkd.in/d3FYjKzi](https://lnkd.in/d3FYjKzi)\n\n🔹 CV Reviewer\nI also worked with Reeha Batool on a CV Reviewer project, where we explored how AI can be used to analyze CVs and provide meaningful feedback to improve them.\n\nWorking on this project helped me understand the practical application of AI in developing useful software solutions.\n\n🔗 Github : [https://lnkd.in/dn2dW2W3](https://lnkd.in/dn2dW2W3)\n\nI would like to sincerely thank my teammates [Muhammad Faisal Bin Afzal](https://www.linkedin.com/in/mfaisalbinafzal/), [Zohaib Ahmed](https://www.linkedin.com/in/zohaib-ahmed-a99614318/), [Reeha Batool](https://www.linkedin.com/in/reehabatool/) and [Ahmad Sharjeel](https://www.linkedin.com/in/i-ahmad615/) for their collaboration, support, and contribution throughout these projects.\n\nA special thanks to Sir Waqas and Sir Ghazanfer Madni for their guidance and mentorship. Their support helped us understand not only the technical aspects of our projects but also how things are approached in a real professional environment.\n\nI am also thankful to the Placement Center, especially Sir [Adnan Bashir](https://www.linkedin.com/in/adnan-bashir-5167786/) and Sir [Muhammad Bilal](https://www.linkedin.com/in/mbilal09/), for their efforts and for providing us with this valuable opportunity.\n\nOverall, this internship was an incredible learning experience. It gave me practical exposure to AI automation, AI agents, n8n, Python, networking, switches, routers, network monitoring, and industry-level software projects, while also helping me understand how technology is used to solve real organizational problems.\n\nI’m thankful to everyone who contributed to making this experience meaningful. Looking forward to applying these learnings to future projects and opportunities. 🚀\n\n[#Internship](https://www.linkedin.com/search/results/all/?keywords=%23internship&origin=HASH_TAG_FROM_FEED) [#CPBM](https://www.linkedin.com/search/results/all/?keywords=%23cpbm&origin=HASH_TAG_FROM_FEED) [#Networking](https://www.linkedin.com/search/results/all/?keywords=%23networking&origin=HASH_TAG_FROM_FEED) [#CyberSecurity](https://www.linkedin.com/search/results/all/?keywords=%23cybersecurity&origin=HASH_TAG_FROM_FEED) [#Python](https://www.linkedin.com/search/results/all/?keywords=%23python&origin=HASH_TAG_FROM_FEED) [#AIAutomation](https://www.linkedin.com/search/results/all/?keywords=%23aiautomation&origin=HASH_TAG_FROM_FEED) [#NetworkAutomation](https://www.linkedin.com/search/results/all/?keywords=%23networkautomation&origin=HASH_TAG_FROM_FEED)`,
+    image: "/images/internshp.png"
+  },
+  {
+    title: "Guest Speaker",
+    org: "IEEE RAS COMSATS Wah",
+    description: "Delivered a session on creating professional presentations using Canva.",
     fullText: `🎉 Honored to Share This Achievement!\n\nI am truly honored to have been invited as a Guest Speaker by IEEE Robotics and Automation Society (RAS), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, to deliver a session on: "Introduction to Canva and How to Create Professional Presentations Using Canva."\n\nIt was a wonderful opportunity to share practical techniques for designing impactful, professional presentations while engaging with talented and enthusiastic students. Seeing their curiosity and creativity made this experience truly rewarding.\n\nI would like to express my sincere gratitude to [IEEE](https://www.linkedin.com/company/ieee/), [IEEE Robotics and Automation Society](https://www.linkedin.com/company/ieee-ras/), [COMSATS University Islamabad](https://www.linkedin.com/company/comsats-university/), Wah Campus, and the organizing team for their warm hospitality and for presenting me with a Certificate of Appreciation. This recognition motivates me to continue contributing to the community through knowledge sharing and professional development.\n\nA special thanks to [SYED ARSALAN](https://www.linkedin.com/in/syed-arsalan-9a122525a/) (Vice Chairperson, [IEEE RAS CUI Wah](https://www.linkedin.com/company/ieee-ras-cui-wah/) Chapter) for the invitation, excellent coordination, and for making this session a success.\n\nI look forward to collaborating on more workshops, seminars, and opportunities that inspire learning, creativity, and innovation.\n\n[#IEEE](https://www.linkedin.com/search/results/all/?keywords=%23ieee) [#RoboticsAndAutomation](https://www.linkedin.com/search/results/all/?keywords=%23roboticsandautomation) [#Canva](https://www.linkedin.com/search/results/all/?keywords=%23canva) [#PublicSpeaking](https://www.linkedin.com/search/results/all/?keywords=%23publicspeaking)`,
-    image: "/images/journey_1.jpg"
+    image: "/images/Guest_speaker.jpg"
   },
   {
     title: "2nd Runner-Up",
     org: "Aurax Speed Programming",
     description: "Secured 2nd Runner-Up at Bahria University speed programming competition.",
     fullText: `Proud to share that I secured 2nd Runner-Up in an Aurax Speed Programming Competition held at [Bahria University](https://www.linkedin.com/company/bahria-university/), Islamabad, alongside my teammate [Usman Ghani](https://www.linkedin.com/in/usmanghanics/)\n\nCompeting against participants from 25+ universities was honestly both challenging and exciting; every problem pushed us to think faster, stay calm, and trust our teamwork.\n\nGrateful to [Namal University](https://www.linkedin.com/company/namal-university-mianwali/) for their continued support and for the opportunity to represent and grow.\n\nOne important takeaway from this experience: in real competitions, you can’t rely on AI or external help, it’s your logic, practice, and problem-solving mindset that truly matter. Tools can support learning, but they can’t replace the ability to think under pressure.\n\nMoments like these remind me how much there is still to learn, and that’s the best part of this journey. Looking forward to improving and coming back even stronger\n\n[#Programming](https://www.linkedin.com/search/results/all/?keywords=%23programming) [#ProblemSolving](https://www.linkedin.com/search/results/all/?keywords=%23problemsolving)`,
-    image: "/images/journey_2.jpg"
+    image: "/images/2nd_Runnerup.png"
   },
   {
     title: "Graphic Designer",
     org: "IEEE Islamabad Section",
     description: "Serving as Graphic Designer for the IEEE Islamabad Section.",
     fullText: `I am currently serving as the Graphic Designer of the IEEE Islamabad Section. It has been a fantastic experience creating visual content and contributing to the community.`,
-    image: "/images/journey_3.jpg"
+    image: "/images/IEEE_Isb.png"
   },
   {
     title: "Student Ambassador",
     org: "Namal University",
     description: "Represented Namal University during BS Admissions Outreach Campaign.",
     fullText: `I had the privilege to represent Namal University during our recent BS Admissions Outreach Campaign held from 11–13 February 2026 in Okara, Sahiwal, and Depalpur.\n\nWe visited multiple colleges and engaged with 2nd-year students to guide them about academic programs, scholarships, and student life at Namal. During the sessions, we highlighted Namal’s modern infrastructure, industry-oriented curriculum, and strong focus on market-driven skills aligned with current industry demands.\n\nInteracting with aspiring students, addressing their queries, and presenting the vision and opportunities at Namal was a truly enriching experience. This outreach not only allowed me to contribute to my university but also significantly enhanced my communication, leadership, and presentation skills.\n\nGrateful for the opportunity and looking forward to more impactful engagements ahead.\n\n[#NamalUniversity](https://www.linkedin.com/search/results/all/?keywords=%23namaluniversity) [#StudentAmbassador](https://www.linkedin.com/search/results/all/?keywords=%23studentambassador)`,
-    image: "/images/journey_4.jpg"
+    image: "/images/OutReach.jpg"
   },
+  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events.", fullText: "Actively participating in IEEE community activities and contributing to technical events.", image: "/images/ieee.png" },
+  { title: "Teaching Assistant", org: "Namal University — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments.", fullText: "Guided students in Object-Oriented Programming concepts and assignments.", image: "/images/ta.png" },
+  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International.", fullText: "Worked on design projects and visual content for Rinova International.", image: "/images/Rinova.jpg" },
+  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers.", fullText: "Produced a video for UNESCO's Water Competition focused on glaciers.", image: "/images/Vedio.jpg" },
   {
     title: "4th Position - Cybersecurity",
     org: "Team RDX Workshop",
     description: "Secured 4th position overall in a 3-day Cybersecurity Workshop CTF.",
     fullText: `Team RDX from FAST University Islamabad recently conducted a 3-day Cybersecurity Workshop at our campus.\n\nSpecial thanks to [Hafiz Muhammad Ibrahim Iqbal](https://www.linkedin.com/in/hafiz-muhammad-ibrahim-iqbal-29389429b/), the head of the team, for leading the workshop and sharing valuable knowledge.\n\nThe workshop included daily challenges with a live scoreboard to track our progress. I’m glad to share that I secured 4th position overall in the competition.\n\nGrateful for this learning experience and looking forward to applying these skills further! 🚀🔐\n\n[#CyberSecurity](https://www.linkedin.com/search/results/all/?keywords=%23cybersecurity) [#CTF](https://www.linkedin.com/search/results/all/?keywords=%23ctf)`,
-    image: "/images/journey_5.jpg"
-  },
+    image: "/images/4th position.jpg"
+  }
+];
+
+const certificationData: JourneyItem[] = [
   {
     title: "Python for Everybody",
     org: "Dr. Charles Severance",
     description: "Successfully completed the Python fundamentals and APIs course.",
     fullText: `Excited to share that I have successfully completed the “Python for Everybody” course by Dr. Charles Severance (Dr. Chuck)! 🐍\n\nThis journey deepened my understanding of Python fundamentals, data structures, web scraping, and working with APIs. I’m now even more confident in applying Python to real-world projects and problem-solving.`,
-    image: "/images/journey_6.jpg"
+    image: "/images/Python.jpg"
   },
   {
     title: "Linux & Shell Scripting",
     org: "IBM (Coursera)",
     description: "Completed Hands-on Introduction to Linux Commands and Shell Scripting.",
     fullText: `Excited to share that I have successfully completed the “Hands-on Introduction to Linux Commands and Shell Scripting” course, authorized by IBM and offered through Coursera.\n\nThis course helped me strengthen my skills in Linux, shell scripting, and command-line operations — a valuable step forward in my journey toward cybersecurity and system administration.`,
-    image: "/images/journey_7.jpg"
+    image: "/images/Linux.jpg"
   },
   {
     title: "System & Network Security",
     org: "LearnKartS (Coursera)",
     description: "Deepened understanding of IoT security, scanning, and network resilience.",
     fullText: `Thrilled to share that I have successfully completed the System and Network Security course by LearnKartS through Coursera.\n\nThis course deepened my understanding of:\n🔹 IoT security methodologies\n🔹 Network scanning & vulnerability assessment\n🔹 DDoS, jamming, and rolling code attacks\n🔹 Best practices for securing connected systems\n\nCybersecurity isn’t just about defense — it’s about staying ahead. Excited to apply these skills to build stronger, safer, and more resilient networks. 💻`,
-    image: "/images/journey_8.jpg"
+    image: "/images/Networksecurity.jpg"
   },
   {
     title: "C++ Patterns: Creational",
     org: "Software Engineering",
     description: "Deepened understanding of creational design patterns in C++.",
     fullText: `I am excited to have completed the "C++ Design Patterns: Creational" course as part of my software engineering assignment! This course deepened my understanding of key design patterns and their implementation in C++, a crucial skill for creating robust and scalable software systems.\n\nA special thanks to [Asiya Batool](https://www.linkedin.com/in/asiya-batool-125079340/) for her insightful guidance and support. Your expertise and encouragement have been invaluable in this learning journey!`,
-    image: "/images/journey_9.jpg"
+    image: "/images/C++ Creational.jpg"
   },
   {
     title: "C++ Patterns: Behavioral",
     org: "LinkedIn Learning",
     description: "Mastered behavioral design patterns for object interactions.",
     fullText: `Thrilled to share that I’ve completed the C++ Design Patterns: Behavioral course on LinkedIn Learning!\n\nThis course provided deep insights into designing robust and scalable software by mastering behavioral design patterns. These patterns help in:\n- Managing object interactions and responsibilities efficiently.\n- Writing cleaner, more maintainable, and flexible C++ code.\n- Leveraging patterns like Strategy, Observer, Command, State, and more to solve real-world programming challenges.`,
-    image: "/images/journey_10.jpg"
+    image: "/images/C++ Behavioural.jpg"
   },
   {
     title: "C++ Patterns: Structural",
     org: "LinkedIn Learning",
     description: "Explored structural patterns for organizing object relationships.",
     fullText: `I’ve recently completed the C++ Design Patterns: Structural course on LinkedIn Learning as part of our Software Engineering assignment.\n\nThis course deepened my understanding of structural design patterns, which are essential for organizing and simplifying relationships between objects and classes. Key concepts I explored include:\n\n1. Adapter Pattern: Bridging incompatible interfaces for seamless integration.\n2. Composite Pattern: Managing object hierarchies by treating individual and grouped objects uniformly.\n3. Decorator Pattern: Adding features dynamically to objects without altering their structure.\n4. Facade Pattern: Providing simplified interfaces to complex subsystems.\n5. Proxy Pattern: Controlling access to objects for security, logging, or performance enhancements.`,
-    image: "/images/journey_11.jpg"
-  },
-  { title: "Official Member", org: "IEEE — 2025–Present", description: "Actively participating in IEEE community activities and contributing to technical events.", fullText: "Actively participating in IEEE community activities and contributing to technical events.", image: "/images/journey_12.jpg" },
-  { title: "Teaching Assistant", org: "Namal University — 2024–2025", description: "Guided students in Object-Oriented Programming concepts and assignments.", fullText: "Guided students in Object-Oriented Programming concepts and assignments.", image: "/images/journey_13.jpg" },
-  { title: "Graphic Designer", org: "Rinova International — 2023–Present", description: "Worked on design projects and visual content for Rinova International.", fullText: "Worked on design projects and visual content for Rinova International.", image: "/images/journey_14.jpg" },
-  { title: "Video Creator", org: "Independent Project — 2023", description: "Produced a video for UNESCO's Water Competition focused on glaciers.", fullText: "Produced a video for UNESCO's Water Competition focused on glaciers.", image: "/images/journey_15.jpg" }
+    image: "/images/C++ Structural.jpg"
+  }
 ];
 
 const statTabs = [
@@ -172,6 +189,97 @@ const motivationalQuotes = [
   "Breaking things so I can fix them 🔧",
 ];
 
+// ─── INFINITE SCROLL REEL ─────────────────────────────────────────────────────
+
+function InfiniteScrollReel({ children, direction = 'left', speed = 1 }: { children: React.ReactNode, direction?: 'left' | 'right', speed?: number }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    let animationId: number;
+    let lastTime = performance.now();
+    let accumulatedScroll = 0;
+
+    if (direction === 'right' && scrollRef.current && scrollRef.current.scrollLeft === 0) {
+      scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 2;
+    }
+
+    const scroll = (time: number) => {
+      const scrollNode = scrollRef.current;
+      if (!scrollNode) return;
+
+      const delta = time - lastTime;
+      lastTime = time;
+
+      if (!isPaused) {
+        const scrollAmount = (speed * delta) / 16.66;
+        
+        if (direction === 'left') {
+           accumulatedScroll += scrollAmount;
+           if (accumulatedScroll >= 1) {
+             scrollNode.scrollLeft += Math.floor(accumulatedScroll);
+             accumulatedScroll -= Math.floor(accumulatedScroll);
+           }
+           if (scrollNode.scrollLeft >= scrollNode.scrollWidth / 2) {
+             scrollNode.scrollLeft -= scrollNode.scrollWidth / 2;
+           }
+        } else {
+           accumulatedScroll += scrollAmount;
+           if (accumulatedScroll >= 1) {
+             scrollNode.scrollLeft -= Math.floor(accumulatedScroll);
+             accumulatedScroll -= Math.floor(accumulatedScroll);
+           }
+           if (scrollNode.scrollLeft <= 0) {
+             scrollNode.scrollLeft += scrollNode.scrollWidth / 2;
+           }
+        }
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+    animationId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPaused, direction, speed]);
+
+  const scrollLeftClick = () => {
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+  };
+  const scrollRightClick = () => {
+    if (scrollRef.current) scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+  };
+
+  return (
+    <div className="w-full relative group py-4" style={{ marginBottom: '40px' }}>
+      <div 
+         ref={scrollRef} 
+         className="flex gap-6 overflow-x-auto no-scrollbar w-max pr-8"
+         onMouseEnter={() => setIsPaused(true)}
+         onMouseLeave={() => setIsPaused(false)}
+         onTouchStart={() => setIsPaused(true)}
+         onTouchEnd={() => setIsPaused(false)}
+         style={{ width: '100%' }}
+      >
+        <div className="flex gap-6 w-max">
+          {children}
+        </div>
+      </div>
+
+      {/* Edge Fading Overlays */}
+      <div className="absolute inset-y-0 left-0 w-[10%] bg-gradient-to-r from-black to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-y-0 right-0 w-[10%] bg-gradient-to-l from-black to-transparent pointer-events-none z-10" />
+
+      {/* Manual Scroll Controls */}
+      <div className="flex justify-center items-center gap-6 mt-8 w-full relative z-20">
+        <button onClick={scrollLeftClick} className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white/10 hover:border-[#a855f7] transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+          <ChevronLeft size={24} className="text-white" />
+        </button>
+        <button onClick={scrollRightClick} className="w-12 h-12 rounded-full border border-white/20 bg-black/60 flex items-center justify-center hover:bg-white/10 hover:border-[#a855f7] transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.1)] hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+          <ChevronRight size={24} className="text-white" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // ─── SKILL TAB SWITCHER ───────────────────────────────────────────────────────
 
 function SkillTabSwitcher() {
@@ -194,7 +302,7 @@ function SkillTabSwitcher() {
 
   const tabContent = [
     {
-      items: ["Python", "C++", "MASM x86 Assembly", "SQL/MySQL", "Bash Scripting", "HTML", "CSS", "JavaScript", "TypeScript", "Kotlin"],
+      items: ["Python", "C++", "C", "MASM x86 Assembly", "SQL/MySQL", "Bash Scripting", "HTML", "CSS", "JavaScript", "GW-BASIC"],
       color: "from-purple-500 to-blue-500",
       border: "border-purple-600 hover:border-purple-400",
     },
@@ -204,12 +312,12 @@ function SkillTabSwitcher() {
       border: "border-blue-600 hover:border-blue-400",
     },
     {
-      items: ["Nmap", "Metasploit", "SQLMap", "Ngrok", "Linux / Kali Linux"],
+      items: ["Nmap", "Burp Suite", "Wireshark", "Wazuh", "Metasploit", "SQLMap", "Ngrok", "Linux / Kali Linux"],
       color: "from-red-500 to-orange-500",
       border: "border-red-600 hover:border-red-400",
     },
     {
-      items: ["Problem-solving", "Teaching", "Project Management & Teamwork", "Time Management"],
+      items: ["Problem-solving", "Teaching", "Project Management & Teamwork", "Time Management", "Communication", "Leadership", "Presentation Skills", "Critical Thinking", "Adaptability"],
       color: "from-green-500 to-teal-500",
       border: "border-green-600 hover:border-green-400",
     },
@@ -221,7 +329,7 @@ function SkillTabSwitcher() {
       <div
         role="tablist"
         aria-label="Skill categories"
-        className="inline-flex items-center bg-[#0a0a0a]/90 backdrop-blur-2xl border border-white/10 rounded-full shadow-2xl gap-1 sm:gap-2 relative w-auto max-w-[95vw] overflow-x-auto no-scrollbar -top-10 md:-top-16"
+        className="inline-flex items-center bg-[#0a0a0a]/90 backdrop-blur-2xl border-2 border-purple-500/60 shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:border-purple-400 hover:shadow-[0_0_40px_rgba(168,85,247,0.7)] transition-all duration-500 rounded-full gap-1 sm:gap-2 relative w-auto max-w-[95vw] overflow-x-auto no-scrollbar -top-10 md:-top-16"
         style={{ padding: '0.5rem 1rem' }}
       >
         <div
@@ -257,7 +365,7 @@ function SkillTabSwitcher() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 w-full"
+            className="flex flex-wrap justify-center gap-3 md:gap-4 w-full"
           >
             {tabContent[activeTab].items.map((item, i) => (
               <motion.div
@@ -265,7 +373,7 @@ function SkillTabSwitcher() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className={`bg-black/80 border rounded-2xl px-4 py-3.5 text-center text-white font-semibold text-sm shadow-md cursor-default hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 min-h-[48px] flex items-center justify-center ${tabContent[activeTab].border}`}
+                className={`bg-black/80 border rounded-2xl px-4 py-3.5 text-center text-white font-semibold text-sm shadow-md cursor-default hover:scale-[1.04] hover:-translate-y-1 transition-all duration-300 min-h-[48px] flex items-center justify-center ${tabContent[activeTab].border} w-[calc(50%-6px)] sm:w-[calc(100%/3-8px)] md:w-[calc(100%/3-10.66px)] lg:w-[calc(25%-12px)]`}
               >
                 {item}
               </motion.div>
@@ -282,7 +390,7 @@ function SkillTabSwitcher() {
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   return (
     <motion.div
-      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm"
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm"
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
@@ -318,7 +426,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 function JourneyCard({ item, index, onClick }: { item: JourneyItem; index: number; onClick: () => void }) {
   return (
     <motion.div
-      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:-translate-y-[6px] hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
+      className="group relative flex flex-col bg-gradient-to-b from-[#111] to-[#141414] border border-white/40 rounded-2xl overflow-hidden hover:border-[3px] hover:border-[#a855f7] transition-all duration-300 hover:shadow-[0_8px_30px_-5px_rgba(168,85,247,0.15)] h-full w-[280px] sm:w-[320px] shrink-0 backdrop-blur-sm cursor-pointer"
       initial={{ opacity: 0, y: 40, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
@@ -360,8 +468,6 @@ export default function Home() {
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [statTab, setStatTab] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [reelState, setReelState] = useState<'auto' | 'force-paused' | 'force-playing'>('auto');
-  const [journeyReelState, setJourneyReelState] = useState<'auto' | 'force-paused' | 'force-playing'>('auto');
   const [selectedJourney, setSelectedJourney] = useState<JourneyItem | null>(null);
 
   const { scrollYProgress } = useScroll();
@@ -421,7 +527,7 @@ export default function Home() {
   ];
 
   return (
-    <div ref={containerRef} className="bg-black text-white overflow-x-hidden">
+    <div ref={containerRef} className="text-white overflow-x-hidden">
 
       {/* ── GLASSMORPHISM NAVBAR ─────────────────────────────── */}
       <header
@@ -487,39 +593,13 @@ export default function Home() {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 md:px-8 lg:px-16"
       >
-        {/* Background blobs */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/5 w-72 h-72 bg-gradient-to-br from-purple-500 via-blue-500 to-pink-400 opacity-15 rounded-full blur-3xl animate-blob1" />
-          <div className="absolute top-2/3 right-1/4 w-52 h-52 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-500 opacity-10 rounded-full blur-3xl animate-blob2" />
-        </div>
-
-        <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-black" />
+        <motion.div className="absolute inset-0 z-0 pointer-events-none" style={{ y: backgroundY }}>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-transparent" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.12),transparent_50%)]" />
         </motion.div>
 
-        {/* Floating dots */}
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full opacity-20 animate-float-dot"
-            style={{
-              width: `${6 + i * 2}px`,
-              height: `${6 + i * 2}px`,
-              top: `${15 + i * 15}%`,
-              left: `${10 + i * 18}%`,
-              animationDelay: `${i * 0.7}s`,
-            }}
-          />
-        ))}
-
-        {/* Floating colored balls */}
-        <div className="floating-element absolute top-24 left-24 w-3 h-3 bg-purple-500 rounded-full hidden md:block" />
-        <div className="floating-element absolute top-40 right-36 w-5 h-5 bg-blue-500 rounded-full hidden md:block" />
-        <div className="floating-element absolute bottom-36 left-1/4 w-2 h-2 bg-pink-500 rounded-full hidden md:block" />
-
-        {/* Hero content */}
-        <div className="relative z-10 text-center px-4 w-full max-w-5xl mx-auto pt-20 pb-10">
+        {/* Hero content explicitly above everything */}
+        <div className="relative z-20 text-center px-4 w-full max-w-5xl mx-auto pt-20 pb-10">
           {/* Mobile profile pic */}
           <motion.div
             className="flex md:hidden justify-center mb-8"
@@ -752,14 +832,18 @@ export default function Home() {
 
       {/* ── SKILLS SECTION ───────────────────────────────────── */}
       <section id="skills" className="min-h-screen flex flex-col justify-center py-24 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-hidden bg-black">
-        {([
-          { t: "8%", l: "6%", s: 2, o: 0.6 }, { t: "35%", r: "7%", s: 3, o: 0.4 },
-          { t: "65%", l: "25%", s: 1, o: 0.8 }, { t: "85%", r: "20%", s: 2, o: 0.5 },
-        ] as { t: string; l?: string; r?: string; s: number; o: number }[]).map((d, i) => (
-          <div key={i} className="white-dot absolute bg-white rounded-full"
-            style={{ top: d.t, left: d.l, right: d.r, width: `${d.s * 4}px`, height: `${d.s * 4}px`, opacity: d.o }} />
-        ))}
-        <div className="max-w-6xl mx-auto w-full flex flex-col items-center">
+        {/* Background blobs */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/5 w-72 h-72 bg-gradient-to-br from-purple-500 via-blue-500 to-pink-400 opacity-15 rounded-full blur-3xl animate-blob1" />
+          <div className="absolute top-2/3 right-1/4 w-52 h-52 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-500 opacity-10 rounded-full blur-3xl animate-blob2" />
+        </div>
+
+        {/* Floating colored balls */}
+        <div className="floating-element absolute top-24 left-24 w-3 h-3 bg-purple-500 rounded-full hidden md:block" />
+        <div className="floating-element absolute top-40 right-36 w-5 h-5 bg-blue-500 rounded-full hidden md:block" />
+        <div className="floating-element absolute bottom-36 left-1/4 w-2 h-2 bg-pink-500 rounded-full hidden md:block" />
+
+        <div className="max-w-6xl mx-auto w-full flex flex-col items-center relative z-10">
           <motion.h2
             className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tighter mb-4 text-center relative -top-10 md:-top-16"
             initial={{ opacity: 0, y: 50 }}
@@ -798,78 +882,70 @@ export default function Home() {
             A collection of my academic and personal projects showcasing problem-solving, creativity, and modern technologies.
           </p>
           <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
-            <div
-              className="flex gap-6 animate-marquee w-max cursor-pointer hover:[animation-play-state:paused]"
-              style={{
-                animationPlayState:
-                  reelState === 'force-paused' ? 'paused' :
-                    reelState === 'force-playing' ? 'running' :
-                      undefined
-              }}
-              onMouseLeave={() => {
-                if (reelState === 'force-playing') setReelState('auto');
-              }}
-              onClick={() => {
-                if (reelState === 'auto') setReelState('force-paused');
-                else if (reelState === 'force-paused') setReelState('force-playing');
-                else setReelState('force-paused');
-              }}
-            >
-              {[...projects, ...projects].map((project, index) => (
+            <InfiniteScrollReel direction="left">
+              {[...projects, ...projects, ...projects, ...projects].map((project, index) => (
                 <ProjectCard key={`${project.title}-${index}`} project={project} index={index} />
               ))}
-            </div>
-
-            {/* Edge Fading Overlays */}
-            <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-[#080808] to-transparent pointer-events-none z-10" />
-            <div className="absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-[#080808] to-transparent pointer-events-none z-10" />
+            </InfiniteScrollReel>
           </div>
         </div>
       </section>
 
       {/* ── PROFESSIONAL JOURNEY ─────────────────────────────── */}
       <section id="work" className="min-h-screen flex flex-col justify-center py-24 md:py-32 relative overflow-hidden bg-black">
-        <div className="w-full flex flex-col items-center z-10 px-6 md:px-12 lg:px-20 mb-12">
+        <div className="w-full mx-auto flex flex-col items-center z-10 px-6 md:px-12 lg:px-20" style={{ maxWidth: '1280px' }}>
           <motion.h2
             className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center shiny-text"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            style={{ textAlign: 'center', width: '100%' }}
           >
             PROFESSIONAL JOURNEY
           </motion.h2>
-          <p className="text-gray-400 text-center mb-6 text-base sm:text-lg max-w-2xl">
+          <p className="text-gray-400 text-center text-base sm:text-lg max-w-2xl font-medium" style={{ textAlign: 'center', margin: '0 auto 40px auto' }}>
             Roles, responsibilities, and experiences that have shaped my career path.
           </p>
         </div>
 
         <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
-          <div
-            className="flex gap-6 animate-marquee w-max cursor-pointer hover:[animation-play-state:paused]"
-            style={{
-              animationPlayState:
-                journeyReelState === 'force-paused' ? 'paused' :
-                  journeyReelState === 'force-playing' ? 'running' :
-                    undefined
-            }}
-            onMouseLeave={() => {
-              if (journeyReelState === 'force-playing') setJourneyReelState('auto');
-            }}
-            onClick={() => {
-              if (journeyReelState === 'auto') setJourneyReelState('force-paused');
-              else if (journeyReelState === 'force-paused') setJourneyReelState('force-playing');
-              else setJourneyReelState('force-paused');
-            }}
-          >
-            {[...journeyData, ...journeyData].map((item, index) => (
+          <InfiniteScrollReel direction="right">
+            {[...journeyData, ...journeyData, ...journeyData, ...journeyData].map((item, index) => (
               <JourneyCard key={`${item.title}-${index}`} item={item} index={index} onClick={() => setSelectedJourney(item)} />
             ))}
-          </div>
+          </InfiniteScrollReel>
 
           {/* Edge Fading Overlays */}
           <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-black to-transparent pointer-events-none z-10" />
           <div className="absolute inset-y-0 right-0 w-[15%] bg-gradient-to-l from-black to-transparent pointer-events-none z-10" />
+        </div>
+      </section>
+
+      {/* ── CERTIFICATIONS ─────────────────────────────── */}
+      <section id="certifications" className="min-h-screen flex flex-col justify-center py-24 md:py-32 relative overflow-hidden bg-black">
+        <div className="w-full mx-auto flex flex-col items-center z-10 px-6 md:px-12 lg:px-20" style={{ maxWidth: '1280px' }}>
+          <motion.h2
+            className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter mb-4 text-center shiny-text"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            style={{ textAlign: 'center', width: '100%' }}
+          >
+            CERTIFICATIONS
+          </motion.h2>
+          <p className="text-gray-400 text-center text-base sm:text-lg max-w-2xl font-medium" style={{ textAlign: 'center', margin: '0 auto 40px auto' }}>
+            Professional certificates and courses that highlight my continuous learning and growth.
+          </p>
+        </div>
+
+        <div className="w-full relative group py-4" style={{ marginBottom: '88px' }}>
+          <InfiniteScrollReel direction="left">
+            {[...certificationData, ...certificationData, ...certificationData, ...certificationData].map((item, index) => (
+              <JourneyCard key={`${item.title}-${index}`} item={item} index={index} onClick={() => setSelectedJourney(item)} />
+            ))}
+          </InfiniteScrollReel>
         </div>
       </section>
 
@@ -912,16 +988,17 @@ export default function Home() {
           </motion.h2>
 
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Ready to bring your ideas to life? Whether it&apos;s a web app, a cybersecurity tool, or a full-stack project — let&apos;s build something amazing together.
+            Ready to bring your ideas to life? Whether it&apos;s a web app, a cybersecurity tool,<br className="hidden md:block" /> or a full-stack project — let&apos;s build something amazing together.
           </motion.p>
 
           <motion.div
+            className="mt-6"
             initial={{ opacity: 0, scale: 0.85 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
@@ -952,7 +1029,7 @@ export default function Home() {
                 A passionate software engineer specializing in modern web development, cybersecurity, and building intuitive digital experiences.
               </p>
             </div>
-            
+
             {/* Quick Links */}
             <div className="col-span-1 flex flex-col gap-4">
               <h4 className="text-white font-bold tracking-widest text-sm uppercase">Quick Links</h4>
@@ -963,7 +1040,7 @@ export default function Home() {
                 <li><Link href="#contact" className="hover:text-purple-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
-            
+
             {/* Socials */}
             <div className="col-span-1 flex flex-col gap-4">
               <h4 className="text-white font-bold tracking-widest text-sm uppercase">Connect</h4>
@@ -980,13 +1057,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          {/* Bottom Divider & Copyright */}
-          <div className="w-full h-px bg-white/10" />
-          
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold tracking-wide text-gray-500">
+
+          {/* Copyright */}
+          <div className="flex items-center justify-center text-xs font-semibold tracking-wide text-gray-500" style={{ paddingTop: '100px' }}>
             <p>© {new Date().getFullYear()} Gulfam Afzal. All rights reserved.</p>
-            <p className="flex items-center gap-1">Built with Next.js & <span className="text-red-500">❤️</span></p>
           </div>
         </div>
       </footer>
@@ -1014,10 +1088,10 @@ export default function Home() {
               >
                 <X size={20} />
               </button>
-              
+
               <h3 className="text-2xl md:text-3xl font-black text-white mb-2 pr-8">{selectedJourney.title}</h3>
               <p className="text-purple-400 font-semibold mb-8">{selectedJourney.org}</p>
-              
+
               <div className="text-gray-300 leading-relaxed text-sm md:text-base space-y-4">
                 {selectedJourney.fullText.split('\n').map((line, i) => {
                   if (!line.trim()) return <br key={i} />;

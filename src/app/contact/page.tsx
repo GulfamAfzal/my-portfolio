@@ -46,7 +46,7 @@ export default function ContactPage() {
       {/* Simple Back Link instead of Navbar */}
       <Link
         href="/"
-        className="absolute top-8 left-6 md:left-12 lg:left-20 z-50 flex items-center gap-2 text-white/70 hover:text-white transition-colors font-semibold text-sm"
+        className="absolute top-14 left-6 md:left-12 lg:left-20 z-50 flex items-center gap-2 text-white/70 hover:text-white transition-colors font-semibold text-sm"
       >
         <ArrowLeft size={16} aria-hidden="true" />
         <span className="hidden sm:inline">Back to Portfolio</span>
@@ -68,7 +68,7 @@ export default function ContactPage() {
           style={{ top: d.t, left: d.l, right: d.r, width: "6px", height: "6px", opacity: 0.4 }} />
       ))}
 
-      <main className="relative z-10 flex flex-col items-center justify-start pt-24 md:pt-32 pb-20 px-6 md:px-12 lg:px-20 min-h-screen">
+      <main className="relative z-10 flex flex-col items-center justify-center py-20 px-6 md:px-12 lg:px-20 min-h-screen">
 
         {/* Heading */}
         <motion.div
@@ -77,11 +77,11 @@ export default function ContactPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-24"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-4 relative inline-block">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter relative inline-block" style={{ marginBottom: '16px' }}>
             <span className="shiny-text">Contact Me</span>
-            <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
+            <span className="absolute left-0 -bottom-3 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
           </h1>
-          <p className="text-gray-400 text-base sm:text-lg mt-8 max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed" style={{ marginTop: '16px' }}>
             Have a project in mind or want to collaborate? I&apos;d love to hear from you. Drop a message below!
           </p>
         </motion.div>
@@ -93,26 +93,28 @@ export default function ContactPage() {
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="bg-gradient-to-b from-[#111] to-[#141414] border border-white/10 hover:border-[#a855f7] rounded-[20px] p-6 md:p-8 flex flex-col gap-6 transition-colors duration-500 hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)] h-full"
+            className="bg-gradient-to-b from-[#111] to-[#141414] border border-white/10 hover:border-[#a855f7] rounded-[20px] flex flex-col transition-colors duration-500 hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)] h-full"
+            style={{ padding: '24px', gap: '16px' }}
           >
             <h2 className="text-xl md:text-2xl font-extrabold text-white">Let&apos;s work together</h2>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 flex-1">
-              <div className="grid sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="flex flex-col flex-1" style={{ gap: '14px' }}>
+              <div className="grid sm:grid-cols-2" style={{ gap: '14px' }}>
                 {["firstName", "lastName"].map((field) => (
-                <input
-                  key={field}
-                  type="text"
-                  name={field}
-                  placeholder={field === "firstName" ? "First Name" : "Last Name"}
-                  value={formData[field as keyof typeof formData]}
-                  onChange={handleChange}
-                  required
-                  className="px-4 py-3 rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
-                />
-              ))}
+                  <input
+                    key={field}
+                    type="text"
+                    name={field}
+                    placeholder={field === "firstName" ? "First Name" : "Last Name"}
+                    value={formData[field as keyof typeof formData]}
+                    onChange={handleChange}
+                    required
+                    className="rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
+                    style={{ padding: '10px 14px' }}
+                  />
+                ))}
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2" style={{ gap: '14px' }}>
                 <input
                   type="email"
                   name="email"
@@ -120,7 +122,8 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="px-4 py-3 rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
+                  className="rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
+                  style={{ padding: '10px 14px' }}
                 />
                 <input
                   type="tel"
@@ -128,7 +131,8 @@ export default function ContactPage() {
                   placeholder="Phone Number (optional)"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="px-4 py-3 rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
+                  className="rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm placeholder-[#9ca3af] transition-all"
+                  style={{ padding: '10px 14px' }}
                 />
               </div>
               <textarea
@@ -137,7 +141,8 @@ export default function ContactPage() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="px-4 py-3 min-h-[150px] rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm resize-none placeholder-[#9ca3af] transition-all flex-1"
+                className="rounded-xl bg-[#0a0a0a] border border-white/15 focus:border-[#a855f7] focus:ring-2 focus:ring-[#a855f7]/30 outline-none text-gray-200 text-sm resize-none placeholder-[#9ca3af] transition-all flex-1"
+                style={{ padding: '10px 14px', minHeight: '120px' }}
               />
 
               <div className="flex items-center gap-4 flex-wrap mt-2">
@@ -145,6 +150,7 @@ export default function ContactPage() {
                   type="submit"
                   disabled={status === "sending"}
                   className="jelly-green-btn disabled:opacity-60 disabled:cursor-not-allowed"
+                  style={{ padding: '12px 24px' }}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                 >
@@ -174,36 +180,39 @@ export default function ContactPage() {
             initial={{ x: 60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="bg-gradient-to-b from-[#111] to-[#141414] border border-white/10 hover:border-[#a855f7] rounded-[20px] p-6 md:p-8 flex flex-col h-full transition-colors duration-500 hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)]"
+            className="bg-gradient-to-b from-[#111] to-[#141414] border border-white/10 hover:border-[#a855f7] rounded-[20px] flex flex-col h-full transition-colors duration-500 hover:shadow-[0_8px_40px_0_rgba(162,89,247,0.18)]"
+            style={{ padding: '24px', justifyContent: 'space-between' }}
           >
-            <div className="mb-6">
-              <h2 className="text-xl md:text-2xl font-extrabold text-white mb-2">Get in Touch</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Have questions or want to discuss a project? Feel free to reach out using any of the methods below. I typically respond within 24 hours.
-              </p>
-            </div>
+            <div>
+              <div className="mb-6">
+                <h2 className="text-xl md:text-2xl font-extrabold text-white mb-2">Get in Touch</h2>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Have questions or want to discuss a project? Feel free to reach out using any of the methods below. I typically respond within 24 hours.
+                </p>
+              </div>
 
-            <div className="flex flex-col gap-3">
-              {[
-                { icon: Phone, label: "03454743847", color: "text-green-400", href: "tel:03454743847" },
-                { icon: Mail, label: "gulfamafzal84@gmail.com", color: "text-purple-400", href: "mailto:gulfamafzal84@gmail.com" },
-                { icon: MapPin, label: "Mianwali, Pakistan", color: "text-blue-400" },
-              ].map(({ icon: Icon, label, color, href }) => (
-                href ? (
-                  <a key={label} href={href} className="flex items-center gap-3 p-4 min-h-[56px] bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 rounded-xl transition-all cursor-pointer group">
-                    <Icon className={`${color} shrink-0`} size={20} />
-                    <span className="text-gray-200 text-sm break-words group-hover:text-white transition-colors">{label}</span>
-                  </a>
-                ) : (
-                  <div key={label} className="flex items-center gap-3 p-4 min-h-[56px] bg-white/5 border border-white/10 rounded-xl">
+              <div className="flex flex-col" style={{ gap: '12px' }}>
+                {[
+                  { icon: Phone, label: "03454743847", color: "text-green-400", href: "tel:03454743847" },
+                  { icon: Mail, label: "gulfamafzal84@gmail.com", color: "text-purple-400", href: "mailto:gulfamafzal84@gmail.com" },
+                  { icon: MapPin, label: "Mianwali, Pakistan", color: "text-blue-400" },
+                ].map(({ icon: Icon, label, color, href }) => (
+                  href ? (
+                    <a key={label} href={href} className="flex items-center gap-4 min-h-[48px] bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/10 rounded-xl transition-all cursor-pointer group" style={{ padding: '12px 24px' }}>
+                      <Icon className={`${color} shrink-0`} size={20} />
+                      <span className="text-gray-200 text-sm break-words group-hover:text-white transition-colors">{label}</span>
+                    </a>
+                  ) : (
+                  <div key={label} className="flex items-center gap-4 min-h-[48px] bg-white/5 border border-white/10 rounded-xl" style={{ padding: '12px 24px' }}>
                     <Icon className={`${color} shrink-0`} size={20} />
                     <span className="text-gray-200 text-sm break-words">{label}</span>
                   </div>
-                )
-              ))}
+                  )
+                ))}
+              </div>
             </div>
 
-            <div className="border-t border-white/10 pt-6 mt-auto">
+            <div className="border-t border-white/10" style={{ paddingTop: '16px' }}>
               <p className="text-gray-400 text-sm mb-4 font-medium">Also find me on:</p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://github.com/GulfamAfzal" target="_blank" rel="noopener noreferrer"
@@ -224,9 +233,9 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <footer className="relative z-10 border-t border-white/10 py-8 px-6">
+      <footer className="relative z-10 py-8 px-6" style={{ paddingTop: '20px' }}>
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-500 text-sm">© 2025 Gulfam Afzal · Built with Next.js & ❤️</p>
+          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Gulfam Afzal. All rights reserved.</p>
           <div className="flex items-center gap-2">
             <a href="https://github.com/GulfamAfzal" target="_blank" rel="noopener noreferrer"
               className="text-gray-500 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5" aria-label="GitHub">
