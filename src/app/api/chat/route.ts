@@ -48,7 +48,7 @@ Projects: ATS CV Reviewer, Network Device Monitor (NetPulse), Tailor Manager (Ma
 Journey: Software Engineering Intern at CPBM, Freelance Web Developer.`,
     });
 
-    let formattedHistory = [];
+    let formattedHistory: any[] = [];
     if (history && Array.isArray(history)) {
       formattedHistory = history.map((msg: any) => ({
         role: msg.role === 'user' ? 'user' : 'model',
