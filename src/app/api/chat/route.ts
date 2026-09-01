@@ -48,9 +48,9 @@ Projects: ATS CV Reviewer, Network Device Monitor (NetPulse), Tailor Manager (Ma
 Journey: Software Engineering Intern at CPBM, Freelance Web Developer.`,
     });
 
-    let formattedHistory: any[] = [];
+    let formattedHistory: { role: string; parts: { text: string }[] }[] = [];
     if (history && Array.isArray(history)) {
-      formattedHistory = history.map((msg: any) => ({
+      formattedHistory = history.map((msg: { role: string; content: string }) => ({
         role: msg.role === 'user' ? 'user' : 'model',
         parts: [{ text: msg.content }],
       }));
@@ -71,8 +71,9 @@ Journey: Software Engineering Intern at CPBM, Freelance Web Developer.`,
     const text = response.text();
 
     return NextResponse.json({ reply: text });
-  } catch (error: any) {
-    console.error('Gemini API Error:', error);
-    return NextResponse.json({ error: error.message || 'Sorry, I am having trouble connecting to my brain right now.' }, { status: 500 });
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error('Gemini API Error:', err);
+    return NextResponse.json({ error: err.message || 'Sorry, I am having trouble connecting to my brain right now.' }, { status: 500 });
   }
 }

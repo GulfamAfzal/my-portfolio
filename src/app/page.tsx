@@ -1152,7 +1152,7 @@ export default function Home() {
 
                 {selectedJourney.tech && selectedJourney.tech.length > 0 && (
                   <div className="mt-8 flex flex-wrap gap-2 pt-6 border-t border-white/10 shrink-0 w-full">
-                    {selectedJourney.tech.map((t, i) => (
+                    {selectedJourney.tech.map((t) => (
                       <span key={t} className="text-[11px] font-semibold tracking-wider border rounded-full px-2.5 py-1 bg-white/5 text-gray-300 border-white/10">
                         {t}
                       </span>

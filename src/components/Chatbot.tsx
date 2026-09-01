@@ -74,12 +74,13 @@ export default function Chatbot() {
       }
 
       setMessages(prev => [...prev, { id: Date.now().toString(), role: 'assistant', content: data.reply }]);
-    } catch (error: any) {
-      console.error(error);
+    } catch (error: unknown) {
+      const err = error as Error;
+      console.error(err);
       setMessages(prev => [...prev, {
         id: Date.now().toString(),
         role: 'assistant',
-        content: error.message || "Sorry, I'm having trouble responding right now — please try again in a moment."
+        content: err.message || "Sorry, I'm having trouble responding right now — please try again in a moment."
       }]);
     } finally {
       setIsLoading(false);
